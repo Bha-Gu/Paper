@@ -1,0 +1,394 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{23}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\url{https://doi.org/#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\bibcommenthead
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem[\protect\citeauthoryear{Abbasi et~al.}{2021}]{IDS1}
+\begin{barticle}
+\bauthor{\bsnm{Abbasi}, \binits{J.S.}},
+\bauthor{\bsnm{Bashir}, \binits{F.}},
+\bauthor{\bsnm{Qureshi}, \binits{K.N.}},
+\bauthor{\bsnm{Islam}, \binits{M.N.}},
+\bauthor{\bsnm{Jeon}, \binits{G.}}:
+\batitle{Deep learning-based feature extraction and optimizing pattern matching
+  for intrusion detection using finite state machine}.
+\bjtitle{Computers \& Electrical Engineering}
+\bvolume{92},
+\bfpage{107094}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 2
+\bibitem[\protect\citeauthoryear{Liu et~al.}{2020}]{IDS3}
+\begin{barticle}
+\bauthor{\bsnm{Liu}, \binits{J.}},
+\bauthor{\bsnm{Zhang}, \binits{W.}},
+\bauthor{\bsnm{Tang}, \binits{Z.}},
+\bauthor{\bsnm{Xie}, \binits{Y.}},
+\bauthor{\bsnm{Ma}, \binits{T.}},
+\bauthor{\bsnm{Zhang}, \binits{J.}},
+\bauthor{\bsnm{Zhang}, \binits{G.}},
+\bauthor{\bsnm{Niyoyita}, \binits{J.P.}}:
+\batitle{Adaptive intrusion detection via ga-gogmm-based pattern learning with
+  fuzzy rough set-based attribute selection}.
+\bjtitle{Expert Systems with Applications}
+\bvolume{139},
+\bfpage{112845}
+(\byear{2020})
+\end{barticle}
+\endbibitem
+
+%%% 3
+\bibitem[\protect\citeauthoryear{Santhosh~Kumar et~al.}{2023}]{IDS2}
+\begin{barticle}
+\bauthor{\bsnm{Santhosh~Kumar}, \binits{S.V.N.}},
+\bauthor{\bsnm{Selvi}, \binits{M.}},
+\bauthor{\bsnm{Kannan}, \binits{A.}}:
+\batitle{A comprehensive survey on machine learning-based intrusion detection
+  systems for secure communication in internet of things}.
+\bjtitle{Computational Intelligence and Neuroscience}
+\bvolume{2023}(\bissue{1}),
+\bfpage{8981988}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem[\protect\citeauthoryear{Ugtakhbayar et~al.}{2020}]{IDS6}
+\begin{bchapter}
+\bauthor{\bsnm{Ugtakhbayar}, \binits{N.}},
+\bauthor{\bsnm{Usukhbayar}, \binits{B.}},
+\bauthor{\bsnm{Baigaltugs}, \binits{S.}}:
+\bctitle{A hybrid model for anomaly-based intrusion detection system}.
+In: \bbtitle{Advances in Intelligent Information Hiding and Multimedia Signal
+  Processing}
+vol. \bseriesno{2},
+pp. \bfpage{419}--\blpage{431}.
+\bpublisher{Springer},
+\blocation{Singapore}
+(\byear{2020})
+\end{bchapter}
+\endbibitem
+
+%%% 5
+\bibitem[\protect\citeauthoryear{Alhomoud et~al.}{2011}]{IDS4}
+\begin{barticle}
+\bauthor{\bsnm{Alhomoud}, \binits{A.}},
+\bauthor{\bsnm{Munir}, \binits{R.}},
+\bauthor{\bsnm{Disso}, \binits{J.P.}},
+\bauthor{\bsnm{Awan}, \binits{I.}},
+\bauthor{\bsnm{Al-Dhelaan}, \binits{A.}}:
+\batitle{Performance evaluation study of intrusion detection systems}.
+\bjtitle{Procedia Computer Science}
+\bvolume{5},
+\bfpage{173}--\blpage{180}
+(\byear{2011})
+\end{barticle}
+\endbibitem
+
+%%% 6
+\bibitem[\protect\citeauthoryear{Kaur and Singh}{2020}]{IDS14}
+\begin{barticle}
+\bauthor{\bsnm{Kaur}, \binits{S.}},
+\bauthor{\bsnm{Singh}, \binits{M.}}:
+\batitle{Hybrid intrusion detection and signature generation using deep
+  recurrent neural networks}.
+\bjtitle{Neural Computing and Applications}
+\bvolume{32}(\bissue{12}),
+\bfpage{7859}--\blpage{7877}
+(\byear{2020})
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem[\protect\citeauthoryear{Chauhan et~al.}{2022}]{IDS15}
+\begin{barticle}
+\bauthor{\bsnm{Chauhan}, \binits{S.}},
+\bauthor{\bsnm{Gangopadhyay}, \binits{S.}},
+\bauthor{\bsnm{Gangopadhyay}, \binits{A.K.}}:
+\batitle{Intrusion detection system for iot using logical analysis of data and
+  information gain ratio}.
+\bjtitle{Cryptography}
+\bvolume{6}(\bissue{4}),
+\bfpage{62}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem[\protect\citeauthoryear{Sowmya and Anita}{2023}]{IDS5}
+\begin{barticle}
+\bauthor{\bsnm{Sowmya}, \binits{T.}},
+\bauthor{\bsnm{Anita}, \binits{E.M.}}:
+\batitle{A comprehensive review of ai-based intrusion detection system}.
+\bjtitle{Measurement: Sensors}
+\bvolume{28},
+\bfpage{100827}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 9
+\bibitem[\protect\citeauthoryear{Boros et~al.}{1997}]{LAD1}
+\begin{barticle}
+\bauthor{\bsnm{Boros}, \binits{E.}},
+\bauthor{\bsnm{Hammer}, \binits{P.L.}},
+\bauthor{\bsnm{Ibaraki}, \binits{T.}},
+\bauthor{\bsnm{Kogan}, \binits{A.}}:
+\batitle{Logical analysis of numerical data}.
+\bjtitle{Math. Program.}
+\bvolume{79}(\bissue{1}),
+\bfpage{163}--\blpage{190}
+(\byear{1997})
+\end{barticle}
+\endbibitem
+
+%%% 10
+\bibitem[\protect\citeauthoryear{Boros et~al.}{2000}]{LAD2}
+\begin{barticle}
+\bauthor{\bsnm{Boros}, \binits{E.}},
+\bauthor{\bsnm{Hammer}, \binits{P.L.}},
+\bauthor{\bsnm{Ibaraki}, \binits{T.}},
+\bauthor{\bsnm{Kogan}, \binits{A.}},
+\bauthor{\bsnm{Mayoraz}, \binits{E.}},
+\bauthor{\bsnm{Muchnik}, \binits{I.}}:
+\batitle{An implementation of logical analysis of data}.
+\bjtitle{IEEE Trans. Knowl. Data Eng.}
+\bvolume{12}(\bissue{2}),
+\bfpage{292}--\blpage{306}
+(\byear{2000})
+\end{barticle}
+\endbibitem
+
+%%% 11
+\bibitem[\protect\citeauthoryear{Kim et~al.}{2014}]{IDS8}
+\begin{barticle}
+\bauthor{\bsnm{Kim}, \binits{G.}},
+\bauthor{\bsnm{Lee}, \binits{S.}},
+\bauthor{\bsnm{Kim}, \binits{S.}}:
+\batitle{A novel hybrid intrusion detection method integrating anomaly
+  detection with misuse detection}.
+\bjtitle{Expert Systems with Applications}
+\bvolume{41}(\bissue{4}),
+\bfpage{1690}--\blpage{1700}
+(\byear{2014})
+\end{barticle}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{Khraisat et~al.}{2019}]{IDS19}
+\begin{barticle}
+\bauthor{\bsnm{Khraisat}, \binits{A.}},
+\bauthor{\bsnm{Gondal}, \binits{I.}},
+\bauthor{\bsnm{Vamplew}, \binits{P.}},
+\bauthor{\bsnm{Kamruzzaman}, \binits{J.}}:
+\batitle{Survey of intrusion detection systems: techniques, datasets and
+  challenges}.
+\bjtitle{Cybersecurity}
+\bvolume{2}(\bissue{1}),
+\bfpage{1}--\blpage{22}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 13
+\bibitem[\protect\citeauthoryear{Abdulganiyu et~al.}{2023}]{IDS9}
+\begin{barticle}
+\bauthor{\bsnm{Abdulganiyu}, \binits{O.H.}},
+\bauthor{\bsnm{Ait~Tchakoucht}, \binits{T.}},
+\bauthor{\bsnm{Saheed}, \binits{Y.K.}}:
+\batitle{A systematic literature review for network intrusion detection system
+  (ids)}.
+\bjtitle{International Journal of Information Security}
+\bvolume{22}(\bissue{5}),
+\bfpage{1125}--\blpage{1162}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 14
+\bibitem[\protect\citeauthoryear{Ahmad et~al.}{2021}]{IDS16}
+\begin{barticle}
+\bauthor{\bsnm{Ahmad}, \binits{Z.}},
+\bauthor{\bsnm{Shahid~Khan}, \binits{A.}},
+\bauthor{\bsnm{Wai~Shiang}, \binits{C.}},
+\bauthor{\bsnm{Abdullah}, \binits{J.}},
+\bauthor{\bsnm{Ahmad}, \binits{F.}}:
+\batitle{Network intrusion detection system: A systematic study of machine
+  learning and deep learning approaches}.
+\bjtitle{Transactions on Emerging Telecommunications Technologies}
+\bvolume{32}(\bissue{1}),
+\bfpage{4150}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 15
+\bibitem[\protect\citeauthoryear{Dini et~al.}{2023}]{IDS17}
+\begin{barticle}
+\bauthor{\bsnm{Dini}, \binits{P.}},
+\bauthor{\bsnm{Elhanashi}, \binits{A.}},
+\bauthor{\bsnm{Begni}, \binits{A.}},
+\bauthor{\bsnm{Saponara}, \binits{S.}},
+\bauthor{\bsnm{Zheng}, \binits{Q.}},
+\bauthor{\bsnm{Gasmi}, \binits{K.}}:
+\batitle{Overview on intrusion detection systems design exploiting machine
+  learning for networking cybersecurity}.
+\bjtitle{Applied Sciences}
+\bvolume{13}(\bissue{13}),
+\bfpage{7507}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 16
+\bibitem[\protect\citeauthoryear{Alexe and Hammer}{2006}]{LAD5}
+\begin{barticle}
+\bauthor{\bsnm{Alexe}, \binits{S.}},
+\bauthor{\bsnm{Hammer}, \binits{P.L.}}:
+\batitle{Accelerated algorithm for pattern detection in logical analysis of
+  data}.
+\bjtitle{Discrete Appl. Math.}
+\bvolume{154}(\bissue{7}),
+\bfpage{1050}--\blpage{1063}
+(\byear{2006})
+\end{barticle}
+\endbibitem
+
+%%% 17
+\bibitem[\protect\citeauthoryear{Crama et~al.}{1988}]{LAD6}
+\begin{barticle}
+\bauthor{\bsnm{Crama}, \binits{Y.}},
+\bauthor{\bsnm{Hammer}, \binits{P.L.}},
+\bauthor{\bsnm{Ibaraki}, \binits{T.}}:
+\batitle{Cause-effect relationships and partially defined boolean functions}.
+\bjtitle{Ann. Oper. Res.}
+\bvolume{16},
+\bfpage{299}--\blpage{325}
+(\byear{1988})
+\end{barticle}
+\endbibitem
+
+%%% 18
+\bibitem[\protect\citeauthoryear{Chauhan et~al.}{2022}]{LAD7}
+\begin{barticle}
+\bauthor{\bsnm{Chauhan}, \binits{S.}},
+\bauthor{\bsnm{Gangopadhyay}, \binits{S.}},
+\bauthor{\bsnm{Gangopadhyay}, \binits{A.K.}}:
+\batitle{Intrusion detection system for iot using logical analysis of data and
+  information gain ratio}.
+\bjtitle{Cryptography}
+\bvolume{6}(\bissue{4}),
+\bfpage{62}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 19
+\bibitem[\protect\citeauthoryear{Gangopadhyay et~al.}{2023}]{LAD8}
+\begin{barticle}
+\bauthor{\bsnm{Gangopadhyay}, \binits{A.K.}},
+\bauthor{\bsnm{Sheth}, \binits{T.}},
+\bauthor{\bsnm{Chauhan}, \binits{S.}}:
+\batitle{Lad in finance: accounting analytics and fraud detection}.
+\bjtitle{Adv. Comput. Intell.}
+\bvolume{3}(\bissue{1}),
+\bfpage{4}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 20
+\bibitem[\protect\citeauthoryear{Bonates et~al.}{2008}]{LAD9}
+\begin{barticle}
+\bauthor{\bsnm{Bonates}, \binits{T.O.}},
+\bauthor{\bsnm{Hammer}, \binits{P.L.}},
+\bauthor{\bsnm{Kogan}, \binits{A.}}:
+\batitle{Maximum patterns in datasets}.
+\bjtitle{Discrete Appl. Math.}
+\bvolume{156}(\bissue{6}),
+\bfpage{846}--\blpage{861}
+(\byear{2008})
+\end{barticle}
+\endbibitem
+
+%%% 21
+\bibitem[\protect\citeauthoryear{Lejeune et~al.}{2019}]{LAD4}
+\begin{barticle}
+\bauthor{\bsnm{Lejeune}, \binits{M.}},
+\bauthor{\bsnm{Lozin}, \binits{V.}},
+\bauthor{\bsnm{Lozina}, \binits{I.}},
+\bauthor{\bsnm{Ragab}, \binits{A.}},
+\bauthor{\bsnm{Yacout}, \binits{S.}}:
+\batitle{Recent advances in the theory and practice of logical analysis of
+  data}.
+\bjtitle{Eur. J. Oper. Res.}
+\bvolume{275}(\bissue{1}),
+\bfpage{1}--\blpage{15}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 22
+\bibitem[\protect\citeauthoryear{ud~din}{2018}]{DATA1}
+\begin{botherref}
+\oauthor{\bsnm{Mohi-ud-din}, \binits{G.}}:
+NSL-KDD.
+Available at: https://dx.doi.org/10.21227/425a-3e55
+(2018)
+\end{botherref}
+\endbibitem
+
+%%% 23
+\bibitem[\protect\citeauthoryear{Cheng}{2022}]{DATA2}
+\begin{botherref}
+\oauthor{\bsnm{Cheng}, \binits{M.}}:
+KDD-CUP99.
+Available at: https://dx.doi.org/10.21227/n4qf-v834
+(2022)
+\end{botherref}
+\endbibitem
+
+\end{thebibliography}
