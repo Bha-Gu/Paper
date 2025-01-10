@@ -168,7 +168,7 @@ The contributions of this work are threefold:
 
 The remainder of this paper is organized as follows: Section~\ref{sec:Review} provides an overview of related work in IDS and LAD. Section~\ref{sec:Methodology} describes the experimental setup and LAD-based rule generation process. Section~\ref{sec:Results} presents the results of our experiments, followed by an analysis of their implications. Finally, Section~\ref{sec:Conclusion} concludes the study with a discussion of future research directions.
 
-\section{Literature Analysis } \label{sec:Review}
+\section{Literature Analysis} \label{sec:Review}
 
 The field of Intrusion Detection Systems (IDS) has witnessed significant advancements with the incorporation of modern computational techniques, including machine learning, deep learning, and Logical Analysis of Data (LAD). These innovations have improved the ability to detect and mitigate cyber threats in increasingly complex network environments, including the Internet of Things (IoT). This section reviews the key developments in IDS and LAD, highlighting state-of-the-art methodologies, their strengths, limitations, and areas of application. The aim is to provide a comprehensive understanding of the existing literature while identifying gaps and opportunities for further research. 
 
@@ -181,6 +181,40 @@ Hybrid IDS combine signature and anomaly detection approaches, leveraging their 
 Logical Analysis of Data (LAD) is a versatile methodology applied in various domains, including IDS and data classification. Boros et al. \cite{LAD1} introduced LAD as a method for analyzing numerical data using Boolean patterns, laying the groundwork for its applications. They further demonstrated its scalability for large-scale datasets \cite{LAD2}. Algorithmic advancements, such as the accelerated pattern detection algorithm proposed by Alexe and Hammer \cite{LAD5}, have improved LAD's computational efficiency. Crama et al. \cite{LAD6} examined cause-effect relationships using Boolean functions, contributing to its theoretical foundations.
 
 Applications of LAD span multiple domains. In IoT security, Chauhan et al. \cite{LAD7} demonstrated its potential in intrusion detection systems. Gangopadhyay et al. \cite{LAD8} explored LAD's utility in financial applications, including accounting analytics and fraud detection. Bonates et al. \cite{LAD9} refined LAD for maximum pattern detection in data mining tasks. Comprehensive surveys, such as the one by Lejeune et al. \cite{LAD4}, review recent advancements in LAD, highlighting its versatility in data analytics and potential for further innovation.
+
+\begin{table}[ht]
+\centering
+\begin{talltblr}[
+caption={Summary of Literature on IDS and LAD},
+label={tab:lit_review}
+  ]{
+  colspec = {X[3,l]X[6,l]X[10,l]},
+  hlines,
+  vlines,
+  row{1} = {font=\bfseries}
+}
+Category       & Focus Area                     & Key Findings / Contributions \\
+
+\SetCell[r=2]{l} \textbf{IDS: Signature-based} & Pattern recognition & Performance evaluation of signature-based IDS \cite{IDS4}. \\
+                              &                     & Deep recurrent neural networks for improved signature generation \cite{IDS14}. \\
+
+\SetCell[r=3]{l}\textbf{IDS: Anomaly-based}   & Feature extraction  & Deep learning-based feature extraction mechanism \cite{IDS1}. \\
+                              & Adaptive learning   & GA-GOGMM adaptive pattern learning with fuzzy attribute selection \cite{IDS3}. \\
+                              & IoT intrusion detection & LAD and information gain ratio for IoT intrusion detection \cite{IDS15}. \\
+
+\SetCell[r=3]{l}\textbf{IDS: Hybrid Approaches} & Enhanced detection & Integration of anomaly and misuse detection for improved performance \cite{IDS6, IDS8}. \\
+                              & IoT security        & Hybrid IDS for scalable and secure IoT environments \cite{IDS5}. \\
+                              & Surveys             & Comprehensive surveys addressing challenges in machine learning-based IDS \cite{IDS2, IDS19}. \\
+
+\SetCell[r=2]{l}\textbf{LAD: Foundations}     & Pattern discovery   & Introduction to LAD for analyzing numerical data \cite{LAD1, LAD2}. \\
+                              & Algorithm development & Accelerated LAD pattern detection \cite{LAD5}. Boolean functions for cause-effect analysis \cite{LAD6}. \\
+
+\SetCell[r=4]{l}\textbf{LAD: Applications}    & IoT and Security    & LAD methods applied to IoT intrusion detection \cite{LAD7}. \\
+                              & Data analytics      & LAD in financial analytics and fraud detection \cite{LAD8}. \\
+                              & Data mining         & Maximum pattern detection and advanced LAD methodologies \cite{LAD9}. \\
+                              & Surveys             & Recent advancements and versatility of LAD \cite{LAD4}. \\
+\end{talltblr}
+\end{table}
 
 \section{Proposed Work}\label{sec:Methodology}
 \begin{figure}[ht!]
@@ -381,14 +415,14 @@ Firstly, an empty list of rules and list of patterns that contains a single blan
     \label{fig:PatternGeneration}
 \end{figure}
 
-Following this, from each existing pattern two new pattern for every feature in binary data are generated by adding each feature once as is and once as its inverse to the pattern.
+Following this, from each existing pattern two new patterns for every feature in binary data are generated by adding each feature once as is and once as its inverse to the pattern.
 Next, patterns that specifically cover instances of a single class are identified and moved to the list of rules with the association with said class.
 The observations that are covered by these rules are removed from consideration for new rules.
 The patterns that do not cover a single class are retained for further iterations.
-This process is repeated until either all data points are covered by the generated rules or a predefined maximum number of iterations is reached.
+This process is repeated until either all the data points are covered by the generated rules or a predefined maximum number of iterations is reached.
 
 \subsection{Classification}
-For classification of each sample a short circuiting approach is used.
+For classification of each sample a short-circuiting approach is used.
 The evaluation is done by matching the sample to every rule in the order the rules were generated.
 Which stops as soon as a matching rule is found and the sample is classified with the class associated with that rule.
 If no rules match the sample, its class is set to NULL.
@@ -409,17 +443,16 @@ The algorithm was implemented in Rust 1.82.0 using the polars crate which was in
 We utilize two popular intrusion detection datasets, as shown in Table~\ref{tab:dataset}.
 \begin{table}[ht!]
     \centering
-    \caption{Datasets}
-    \begin{tabular}{|l|r|c|c|}
-        \hline
+    % \caption{Datasets}
+    \begin{talltblr}[
+      caption = {Datasets},
+      label = {tab:dataset}
+      ]{colspec = {lrcc}, vlines, hlines}
         \textbf{Dataset} & \textbf{Samples} & \textbf{Features} & \textbf{Classes} \\
-        \hline
         NSL-KDD \cite{DATA1} & 125,973 & 41 & 23 \\
-        \hline
         KDD-Cup99 \cite{DATA2}  & 4,898,431 & 41 & 23 \\
-        \hline
-    \end{tabular}
-    \label{tab:dataset}
+    \end{talltblr}
+    % \label{tab:dataset}
 \end{table}
 These datasets contain labeled network traffic data, representing normal and malicious activities.
 
@@ -456,16 +489,16 @@ These results demonstrate the effectiveness of the proposed method, particularly
 
 \begin{table}[ht!]
     \centering
-    \caption{Performance Metrics for Different Datasets}
-    \begin{tabular}{lccccc}
-    \toprule
+    % \caption{Performance Metrics for Different Datasets}
+    \begin{talltblr}[
+      caption = {Performance Metrics for Different Datasets},
+      label = {tab:4result}
+      ]{colspec = {lccccc}, hline{1,Z} = {1pt}, hline{2}}
     \textbf{Dataset} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F2-Score} & \textbf{Coverage} \\
-    \midrule
     NSLKDD & 75.48\% & 85.58\% & 75.48\% & 77.30\% & 92.56\% \\
     KDDCup99 (10\%) & 96.10\% & 99.96\% & 96.10\% & 96.85\% & 96.13\% \\
-    \bottomrule
-    \end{tabular}
-    \label{tab:4result}
+    \end{talltblr}
+    % \label{tab:4result}
 \end{table}
 
 Table~\ref{tab:Dataset_Samples} provides insights into the characteristics of the datasets used in the experiments.
@@ -475,16 +508,16 @@ These details emphasize the variability in dataset size and feature representati
 
 \begin{table}[ht!]
     \centering
-    \caption{Dataset Samples and Features}
-    \begin{tabular}{lcc}
-    \toprule
+    % \caption{Dataset Samples and Features}
+    \begin{talltblr}[
+      caption = {Dataset Samples and Features},
+      label = {tab:Dataset_Samples}
+      ]{colspec = {lcc}, hline{1,Z} = {1pt}, hline{2}}
     \textbf{Dataset} & \textbf{Samples} & \textbf{Features} \\
-    \midrule
     KDDCup99 (10\%) & 330,994 & 41 (32 preprocessed, 29 binarized) \\
     NSLKDD & 125,973 & 41 (54 binarized) \\
-    \bottomrule
-    \end{tabular}
-    \label{tab:Dataset_Samples}
+    \end{talltblr}
+    % \label{tab:Dataset_Samples}
 \end{table}
 
 Table~\ref{tab:Rules_Generated} focuses on the number of rules generated for the datasets based on different minimum match criteria at a depth of 3.
@@ -494,17 +527,15 @@ These statistics indicate how stricter matching criteria reduce the number of ge
 
 \begin{table}[ht!]
     \centering
-    \caption{Number of Rules Generated for Different Minimum Matches of Sample at depth 3}
-    \begin{tabular}{lcc}
-    \toprule
+    \begin{talltblr}[
+    caption = {Number of Rules Generated for Different Minimum Matches of Sample at depth 3},
+    label = {tab:Rules_Generated}
+    ]{colspec = {lcc}, hline{1,Z} = {1pt}, hline{2}}
     \textbf{Matches} & \textbf{KDDCup99 (10\%)} & \textbf{NSLKDD} \\
-    \midrule
     1 & 243 & 365 \\
     10 & 85 & 150 \\
     50 & 42 & 65 \\
-    \bottomrule
-    \end{tabular}
-    \label{tab:Rules_Generated}
+  \end{talltblr}
 \end{table}
 
 Table~\ref{tab:Overall_Metrics} summarizes the overall metrics for both datasets under different matching criteria. 
@@ -512,120 +543,109 @@ For the KDDCup99 dataset, with at least one match, the accuracy, precision, reca
 
 \begin{table}[ht!]
     \centering
-    \caption{Overall Metrics for Different Matching Criteria}
-    \begin{tabular}{lcccccc}
-    \toprule
+    \begin{talltblr}[
+    caption={Overall Metrics for Different Matching Criteria},
+    label={tab:Overall_Metrics}
+      ]{columns = {c}, column{1} = {l}, hline{1,Z}={1pt}, hline{2,5}}
     \textbf{Dataset} & \textbf{Matches} & \textbf{Acc} & \textbf{Prec} & \textbf{Recall} & \textbf{F2-Score} & \textbf{Coverage} \\
-    \midrule
-    \multirow{3}{*}{KDDCup99} & 1 & 95.91\% & 99.96\% & 95.91\% & - & 95.94\% \\
+    \SetCell[r=3]{l}{KDDCup99} & 1 & 95.91\% & 99.96\% & 95.91\% & - & 95.94\% \\
     & 10 & 93.27\% & 99.98\% & 93.27\% & - & 93.29\% \\
     & 50 & 75.80\% & 99.97\% & 75.80\% & - & 75.81\% \\
-    \midrule
-    \multirow{3}{*}{NSLKDD} & 1 & 75.42\% & 86.13\% & 75.42\% & - & 91.52\% \\
+    \SetCell[r=3]{l}{NSLKDD} & 1 & 75.42\% & 86.13\% & 75.42\% & - & 91.52\% \\
     & 10 & 71.93\% & 87.29\% & 71.93\% & - & 85.55\% \\
     & 50 & 70.08\% & 88.83\% & 70.08\% & - & 81.17\%\\
-    \bottomrule
-    \end{tabular}
-    \label{tab:Overall_Metrics}
+    \end{talltblr}
 \end{table}
 
 The decision matrices provided in Tables~\ref{tab:NSLKDD_Matrix} and \ref{tab:KDDcup_Matrix} offer a detailed view of classification performance for the NSLKDD and KDDCup99 datasets under varying minimum match criteria.
+
+\begin{table}[ht!]
+    \centering
+    \begin{talltblr}[
+    caption = {Decision Matrix for NSLKDD},
+    label = {tab:NSLKDD_Matrix}
+      ]{c}
+
+    \begin{tblr}{columns = {c}, column{1} = {l}, column{Z} = {r}, vlines = {2-Z}{solid}, hline{2-Z}}
+        \SetCell[c=4]{c}{\textbf{For Minimum 1 Matching Sample}} \\
+         & \textbf{Attack} & \textbf{Normal} & \textit{NULL} \\  
+        \textbf{Attack} & 8295 & 3336 & 1202 \\
+        \textbf{Normal} & 292 & 8709 & 710
+    \end{tblr}
+
+\\
+
+    \begin{tblr}{columns = {c}, column{1} = {l}, column{Z} = {r}, vlines = {2-Z}{solid}, hline{2-Z}}
+      \SetCell[c=4]{c}{\textbf{For Minimum 10 Matching Samples}} \\
+         & \textbf{Attack} & \textbf{Normal} & \textit{NULL} \\
+        \textbf{Attack} & 7781 & 2801 & 2151 \\
+        \textbf{Normal} & 268 & 8336 & 1107 
+    \end{tblr}
+
+\\
+    \begin{tblr}{columns = {c}, column{1} = {l}, column{Z} = {r}, vlines = {2-Z}{solid}, hline{2-Z}}
+        \SetCell[c=4]{c}{\textbf{For Minimum 50 Matching Samples}} \\
+         & \textbf{Attack} & \textbf{Normal} & \textit{NULL} \\
+        \textbf{Attack} & 7725 & 2253 & 2855 \\
+        \textbf{Normal} & 247 & 8073 & 1391 \\
+    \end{tblr}
+
+    \end{talltblr}
+
+\end{table}
+
 For the NSLKDD dataset, as shown in Table~\ref{tab:NSLKDD_Matrix}, the number of correctly classified "Attack" and "Normal" instances decreases as the minimum match criterion becomes stricter, resulting in an increase in \textit{NULL} (unmatched) cases.
 For instance, with a minimum of one match, there were 8,295 correctly classified "Attack" instances and 8,709 "Normal" instances. However, with a minimum of 50 matches, these numbers reduced to 7,725 and 8,073, respectively.
+
+\begin{table}[ht!]
+    \centering
+    \begin{talltblr}[
+    caption = {Decision Matrix for KDDCup (10\%)},
+    label = {tab:KDDcup_Matrix}
+      ]{c}
+
+    % Subtable 1
+    \begin{tblr}{columns = {c}, column{1} = {l}, column{Z} = {r}, vlines = {2-Z}{solid}, hline{2-Z}}
+        \SetCell[c=7]{c}{\textbf{For Minimum 1 Matching Sample}} \\
+         & \textbf{DOS} & \textbf{Normal} & \textbf{Probe} & \textbf{R2L} & \textbf{U2R} & \textit{NULL} \\
+        \textbf{DOS} & 124431 & 8 & 0 & 0 & 0 & 4742 \\
+        \textbf{Normal} & 3 & 30515 & 3 & 2 & 5 & 1574 \\
+        \textbf{Probe} & 2 & 8 & 1259 & 0 & 0 & 86 \\
+        \textbf{R2L} & 0 & 10 & 0 & 42 & 1 & 219 \\
+        \textbf{U2R} & 1 & 1 & 0 & 2 & 13 & 0 \\
+    \end{tblr}
+
+\\
+    % Subtable 2
+
+    \begin{tblr}{columns = {c}, column{1} = {l}, column{Z} = {r}, vlines = {2-Z}{solid}, hline{2-Z}}
+      \SetCell[c=7]{c}{\textbf{For Minimum 10 Matching Samples}} \\
+         & \textbf{DOS} & \textbf{Normal} & \textbf{Probe} & \textbf{R2L} & \textbf{U2R} & \textit{NULL} \\
+        \textbf{DOS} & 123506 & 4 & 0 & 0 & 0 & 5671 \\
+        \textbf{Normal} & 1 & 27529 & 1 & 1 & 0 & 4570 \\
+        \textbf{Probe} & 1 & 2 & 898 & 0 & 0 & 454 \\
+        \textbf{R2L} & 0 & 8 & 0 & 123 & 0 & 241 \\
+        \textbf{U2R} & 1 & 2 & 0 & 1 & 7 & 6 \\
+    \end{tblr}
+
+\\
+    % Subtable 3
+    \begin{tblr}{columns = {c}, column{1} = {l}, column{Z} = {r}, vlines = {2-Z}{solid}, hline{2-Z}}
+        \SetCell[c=7]{c}{\textbf{For Minimum 50 Matching Samples}} \\
+         & \textbf{DOS} & \textbf{Normal} & \textbf{Probe} & \textbf{R2L} & \textbf{U2R} & \textit{NULL} \\
+        \textbf{DOS} & 95373 & 3 & 0 & 0 & 0 & 33805 \\
+        \textbf{Normal} & 1 & 27265 & 2 & 1 & 0 & 4833 \\
+        \textbf{Probe} & 4 & 2 & 843 & 0 & 0 & 504 \\
+        \textbf{R2L} & 0 & 4 & 0 & 94 & 0 & 274 \\
+        \textbf{U2R} & 1 & 2 & 0 & 0 & 0 & 14 \\
+    \end{tblr}
+
+    \end{talltblr}
+
+\end{table}
+
 A similar trend is observed in the decision matrices for the KDDCup99 dataset in Table~\ref{tab:KDDcup_Matrix}. For example, with one match, 124,431 "DOS" instances and 30,515 "Normal" instances were correctly classified, while with 50 matches, these numbers dropped to 95,373 and 27,265, respectively.
 This illustrates the trade-off between stricter match criteria and classification coverage.
-
-\begin{table}[ht!]
-    \centering
-    \caption{Decision Matrix for NSLKDD}
-    \label{tab:NSLKDD_Matrix}
-
-    \begin{tabular}{c}
-
-    % Subtable 1
-    \begin{tabular}{|l|c|c|r|}
-        \hline
-        \multicolumn{4}{|c|}{\textbf{For Minimum 1 Matching Sample}} \\ \hline
-         & \textbf{Attack} & \textbf{Normal} & \textit{NULL} \\  \hline 
-        \textbf{Attack} & 8295 & 3336 & 1202 \\ \hline 
-        \textbf{Normal} & 292 & 8709 & 710 \\ \hline
-    \end{tabular}
-
-\\
-\\
-    % Subtable 2
-    \begin{tabular}{|l|c|c|r|}
-        \hline
-        \multicolumn{4}{|c|}{\textbf{For Minimum 10 Matching Samples}} \\ \hline
-         & \textbf{Attack} & \textbf{Normal} & \textit{NULL} \\  \hline 
-        \textbf{Attack} & 7781 & 2801 & 2151 \\ \hline 
-        \textbf{Normal} & 268 & 8336 & 1107 \\ \hline
-    \end{tabular}
-
-\\
-\\
-    % Subtable 3
-    \begin{tabular}{|l|c|c|r|}
-        \hline
-        \multicolumn{4}{|c|}{\textbf{For Minimum 50 Matching Samples}} \\ \hline
-         & \textbf{Attack} & \textbf{Normal} & \textit{NULL} \\  \hline 
-        \textbf{Attack} & 7725 & 2253 & 2855 \\ \hline 
-        \textbf{Normal} & 247 & 8073 & 1391 \\ \hline
-    \end{tabular}
-
-    \end{tabular}
-
-\end{table}
-
-\begin{table}[ht!]
-    \centering
-    \caption{Decision Matrix for KDDCup (10\%)}
-    \label{tab:KDDcup_Matrix}
-
-    \begin{tabular}{c}
-
-    % Subtable 1
-    \begin{tabular}{|l|c|c|c|c|c|r|}
-        \hline
-        \multicolumn{7}{|c|}{\textbf{For Minimum 1 Matching Sample}} \\ \hline
-         & \textbf{DOS} & \textbf{Normal} & \textbf{Probe} & \textbf{R2L} & \textbf{U2R} & \textit{NULL} \\ \hline 
-        \textbf{DOS} & 124431 & 8 & 0 & 0 & 0 & 4742 \\ \hline 
-        \textbf{Normal} & 3 & 30515 & 3 & 2 & 5 & 1574 \\ \hline
-        \textbf{Probe} & 2 & 8 & 1259 & 0 & 0 & 86 \\ \hline
-        \textbf{R2L} & 0 & 10 & 0 & 42 & 1 & 219 \\ \hline
-        \textbf{U2R} & 1 & 1 & 0 & 2 & 13 & 0 \\ \hline
-    \end{tabular}
-
-\\
-\\
-    % Subtable 2
-    \begin{tabular}{|l|c|c|c|c|c|r|}
-        \hline
-        \multicolumn{7}{|c|}{\textbf{For Minimum 10 Matching Samples}} \\ \hline
-         & \textbf{DOS} & \textbf{Normal} & \textbf{Probe} & \textbf{R2L} & \textbf{U2R} & \textit{NULL} \\ \hline 
-        \textbf{DOS} & 123506 & 4 & 0 & 0 & 0 & 5671 \\ \hline 
-        \textbf{Normal} & 1 & 27529 & 1 & 1 & 0 & 4570 \\ \hline
-        \textbf{Probe} & 1 & 2 & 898 & 0 & 0 & 454 \\ \hline
-        \textbf{R2L} & 0 & 8 & 0 & 123 & 0 & 241 \\ \hline
-        \textbf{U2R} & 1 & 2 & 0 & 1 & 7 & 6 \\ \hline
-    \end{tabular}
-
-\\
-\\
-    % Subtable 3
-    \begin{tabular}{|l|c|c|c|c|c|r|}
-        \hline
-        \multicolumn{7}{|c|}{\textbf{For Minimum 50 Matching Samples}} \\ \hline
-         & \textbf{DOS} & \textbf{Normal} & \textbf{Probe} & \textbf{R2L} & \textbf{U2R} & \textit{NULL} \\ \hline 
-        \textbf{DOS} & 95373 & 3 & 0 & 0 & 0 & 33805 \\ \hline 
-        \textbf{Normal} & 1 & 27265 & 2 & 1 & 0 & 4833 \\ \hline
-        \textbf{Probe} & 4 & 2 & 843 & 0 & 0 & 504 \\ \hline
-        \textbf{R2L} & 0 & 4 & 0 & 94 & 0 & 274 \\ \hline
-        \textbf{U2R} & 1 & 2 & 0 & 0 & 0 & 14 \\ \hline
-    \end{tabular}
-
-    \end{tabular}
-\end{table}
 
 Overall, the tables provide a comprehensive view of the performance and effectiveness of the binarization and rule-generation framework across multiple datasets, emphasizing how various factors, such as dataset characteristics and matching criteria, influence the classification results.
 
