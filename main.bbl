@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{23}
+\begin{thebibliography}{25}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -203,6 +203,20 @@ pp. \bfpage{419}--\blpage{431}.
 \endbibitem
 
 %%% 11
+\bibitem[\protect\citeauthoryear{Rai et~al.}{2016}]{IDS12}
+\begin{barticle}
+\bauthor{\bsnm{Rai}, \binits{K.}},
+\bauthor{\bsnm{Devi}, \binits{M.S.}},
+\bauthor{\bsnm{Guleria}, \binits{A.}}:
+\batitle{Decision tree-based algorithm for intrusion detection}.
+\bjtitle{International Journal of Advanced Networking and Applications}
+\bvolume{7}(\bissue{4}),
+\bfpage{2828}
+(\byear{2016})
+\end{barticle}
+\endbibitem
+
+%%% 12
 \bibitem[\protect\citeauthoryear{Kim et~al.}{2014}]{IDS8}
 \begin{barticle}
 \bauthor{\bsnm{Kim}, \binits{G.}},
@@ -217,7 +231,22 @@ pp. \bfpage{419}--\blpage{431}.
 \end{barticle}
 \endbibitem
 
-%%% 12
+%%% 13
+\bibitem[\protect\citeauthoryear{Kalavadekar and Sane}{2019}]{IDS10}
+\begin{barticle}
+\bauthor{\bsnm{Kalavadekar}, \binits{P.N.}},
+\bauthor{\bsnm{Sane}, \binits{S.S.}}:
+\batitle{Building an effective intrusion detection system using combined
+  signature and anomaly detection techniques}.
+\bjtitle{International Journal of Innovative Technology and Exploring
+  Engineering}
+\bvolume{8}(\bissue{10}),
+\bfpage{429}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 14
 \bibitem[\protect\citeauthoryear{Khraisat et~al.}{2019}]{IDS19}
 \begin{barticle}
 \bauthor{\bsnm{Khraisat}, \binits{A.}},
@@ -233,7 +262,7 @@ pp. \bfpage{419}--\blpage{431}.
 \end{barticle}
 \endbibitem
 
-%%% 13
+%%% 15
 \bibitem[\protect\citeauthoryear{Abdulganiyu et~al.}{2023}]{IDS9}
 \begin{barticle}
 \bauthor{\bsnm{Abdulganiyu}, \binits{O.H.}},
@@ -248,7 +277,7 @@ pp. \bfpage{419}--\blpage{431}.
 \end{barticle}
 \endbibitem
 
-%%% 14
+%%% 16
 \bibitem[\protect\citeauthoryear{Ahmad et~al.}{2021}]{IDS16}
 \begin{barticle}
 \bauthor{\bsnm{Ahmad}, \binits{Z.}},
@@ -265,7 +294,7 @@ pp. \bfpage{419}--\blpage{431}.
 \end{barticle}
 \endbibitem
 
-%%% 15
+%%% 17
 \bibitem[\protect\citeauthoryear{Dini et~al.}{2023}]{IDS17}
 \begin{barticle}
 \bauthor{\bsnm{Dini}, \binits{P.}},
@@ -283,7 +312,7 @@ pp. \bfpage{419}--\blpage{431}.
 \end{barticle}
 \endbibitem
 
-%%% 16
+%%% 18
 \bibitem[\protect\citeauthoryear{Alexe and Hammer}{2006}]{LAD5}
 \begin{barticle}
 \bauthor{\bsnm{Alexe}, \binits{S.}},
@@ -297,7 +326,7 @@ pp. \bfpage{419}--\blpage{431}.
 \end{barticle}
 \endbibitem
 
-%%% 17
+%%% 19
 \bibitem[\protect\citeauthoryear{Crama et~al.}{1988}]{LAD6}
 \begin{barticle}
 \bauthor{\bsnm{Crama}, \binits{Y.}},
@@ -311,7 +340,7 @@ pp. \bfpage{419}--\blpage{431}.
 \end{barticle}
 \endbibitem
 
-%%% 18
+%%% 20
 \bibitem[\protect\citeauthoryear{Chauhan et~al.}{2022}]{LAD7}
 \begin{barticle}
 \bauthor{\bsnm{Chauhan}, \binits{S.}},
@@ -326,7 +355,7 @@ pp. \bfpage{419}--\blpage{431}.
 \end{barticle}
 \endbibitem
 
-%%% 19
+%%% 21
 \bibitem[\protect\citeauthoryear{Gangopadhyay et~al.}{2023}]{LAD8}
 \begin{barticle}
 \bauthor{\bsnm{Gangopadhyay}, \binits{A.K.}},
@@ -340,7 +369,7 @@ pp. \bfpage{419}--\blpage{431}.
 \end{barticle}
 \endbibitem
 
-%%% 20
+%%% 22
 \bibitem[\protect\citeauthoryear{Bonates et~al.}{2008}]{LAD9}
 \begin{barticle}
 \bauthor{\bsnm{Bonates}, \binits{T.O.}},
@@ -354,7 +383,7 @@ pp. \bfpage{419}--\blpage{431}.
 \end{barticle}
 \endbibitem
 
-%%% 21
+%%% 23
 \bibitem[\protect\citeauthoryear{Lejeune et~al.}{2019}]{LAD4}
 \begin{barticle}
 \bauthor{\bsnm{Lejeune}, \binits{M.}},
@@ -371,7 +400,7 @@ pp. \bfpage{419}--\blpage{431}.
 \end{barticle}
 \endbibitem
 
-%%% 22
+%%% 24
 \bibitem[\protect\citeauthoryear{ud~din}{2018}]{DATA1}
 \begin{botherref}
 \oauthor{\bsnm{Mohi-ud-din}, \binits{G.}}:
@@ -381,7 +410,7 @@ Available at: https://dx.doi.org/10.21227/425a-3e55
 \end{botherref}
 \endbibitem
 
-%%% 23
+%%% 25
 \bibitem[\protect\citeauthoryear{Cheng}{2022}]{DATA2}
 \begin{botherref}
 \oauthor{\bsnm{Cheng}, \binits{M.}}:

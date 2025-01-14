@@ -446,6 +446,7 @@ method, particularly for the KDDCup99 dataset.
 #figure(
   table(
     columns: (3fr,2fr,2fr,2fr,2fr,2fr),
+    stroke: (x: none),
     [Dataset],[Accuracy],[Precision],[Recall],[F2-Score],[Coverage],
     [NSLKDD],        [75.48%],   [85.58%], [75.48%],    [77.30%],    [92.56%],
     [KDDCup99 (10%)], [96.10%],   [99.96%], [96.10%],    [96.85%],    [96.13%],

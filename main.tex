@@ -26,7 +26,7 @@
 %%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
 
 
-%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove Numbered in the optional parenthesis. 
+%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove Numbered in the optional parenthesis. 
 %%The option is available for: sn-basic.bst, sn-vancouver.bst, sn-chicago.bst%  
 \RequirePackage{amsthm}
 \RequirePackage{fix-cm}
@@ -105,10 +105,10 @@
 \title[Article Title]{Intrusion Detection System using LAD}
 
 %%=============================================================%%
-%% GivenName	-> \fnm{Joergen W.}
-%% Particle	-> \spfx{van der} -> surname prefix
-%% FamilyName	-> \sur{Ploeg}
-%% Suffix	-> \sfx{IV}
+%% GivenName  -> \fnm{Joergen W.}
+%% Particle -> \spfx{van der} -> surname prefix
+%% FamilyName -> \sur{Ploeg}
+%% Suffix -> \sfx{IV}
 %% \author*[1,2]{\fnm{Joergen W.} \spfx{van der} \sur{Ploeg} 
 %%  \sfx{IV}}\email{iauthor@gmail.com}
 %%=============================================================%%
@@ -125,8 +125,8 @@
 %%==================================%%
 
 \abstract{Intrusion Detection Systems (IDS) will continue to play a critical role in safeguarding networks from malicious activities in an increasingly connected world. Traditional IDS approaches are expected to face persistent challenges, including high false positive rates, inefficiency in handling evolving threats, and limited adaptability to diverse data distributions. This research will investigate the potential of Logical Analysis of Data (LAD) as a robust mathematical framework for enhancing intrusion detection. LAD will be employed to identify critical patterns in network traffic, leveraging its ability to handle heterogeneous and imbalanced datasets effectively.
-The study will design a LAD-based IDS model and evaluate its performance on widely recognized datasets, such as NSL-KDD and KDD-Cup99. Key performance metrics, including accuracy, precision, recall, F2-score, and data coverage, will be assessed to measure the effectiveness of the proposed model. It is anticipated that the LAD-based approach will demonstrate superior adaptability and accuracy compared to traditional methods, while also addressing issues of dataset coverage and computational efficiency.
-The findings of this study will provide valuable insights into the application of LAD in cybersecurity and will pave the way for the development of more robust, scalable, and adaptive IDS models. Future research will focus on refining the LAD methodology to address its limitations and further enhance its applicability to real-world intrusion detection scenarios.}
+  The study will design a LAD-based IDS model and evaluate its performance on widely recognized datasets, such as NSL-KDD and KDD-Cup99. Key performance metrics, including accuracy, precision, recall, F2-score, and data coverage, will be assessed to measure the effectiveness of the proposed model. It is anticipated that the LAD-based approach will demonstrate superior adaptability and accuracy compared to traditional methods, while also addressing issues of dataset coverage and computational efficiency.
+  The findings of this study will provide valuable insights into the application of LAD in cybersecurity and will pave the way for the development of more robust, scalable, and adaptive IDS models. Future research will focus on refining the LAD methodology to address its limitations and further enhance its applicability to real-world intrusion detection scenarios.}
 
 %%================================%%
 %% Sample for structured abstract %%
@@ -161,86 +161,74 @@ Logical Analysis of Data (LAD) has emerged as a promising data mining methodolog
 
 In this study, we aim to investigate the effectiveness of LAD in the context of intrusion detection by applying it to two benchmark datasets: NSL-KDD and KDD-Cup99. Through rigorous experimentation and analysis, we evaluate LAD's performance across various metrics, including accuracy, precision, recall, and F2-score. Additionally, we address the limitations of LAD, such as long training times and incomplete coverage, by proposing potential enhancements to its methodology. Furthermore, we highlight the trade-offs between rule interpretability and detection performance, with a focus on improving the scalability and applicability of LAD in real-world intrusion detection scenarios.
 
-The contributions of this work are threefold: 
+The contributions of this work are twofold:
 1. A comprehensive evaluation of LAD's performance on intrusion detection datasets with varying characteristics.
 2. Insights into the trade-offs and challenges associated with LAD-based IDS, including computational complexity and coverage limitations.
-3. A proposed framework for integrating secondary models as fallback mechanisms to enhance detection accuracy and address coverage gaps.
+% 3. A proposed framework for integrating secondary models as fallback mechanisms to enhance detection accuracy and address coverage gaps.
 
 The remainder of this paper is organized as follows: Section~\ref{sec:Review} provides an overview of related work in IDS and LAD. Section~\ref{sec:Methodology} describes the experimental setup and LAD-based rule generation process. Section~\ref{sec:Results} presents the results of our experiments, followed by an analysis of their implications. Finally, Section~\ref{sec:Conclusion} concludes the study with a discussion of future research directions.
 
 \section{Literature Analysis} \label{sec:Review}
 
-The field of Intrusion Detection Systems (IDS) has witnessed significant advancements with the incorporation of modern computational techniques, including machine learning, deep learning, and Logical Analysis of Data (LAD). These innovations have improved the ability to detect and mitigate cyber threats in increasingly complex network environments, including the Internet of Things (IoT). This section reviews the key developments in IDS and LAD, highlighting state-of-the-art methodologies, their strengths, limitations, and areas of application. The aim is to provide a comprehensive understanding of the existing literature while identifying gaps and opportunities for further research. 
+The field of Intrusion Detection Systems has witnessed significant advancements with the incorporation of modern computational techniques, including machine learning, deep learning, and LAD. These innovations have improved the ability to detect and mitigate cyber threats in increasingly complex network environments, including the IoT. This section reviews the key developments in IDS and LAD, highlighting state-of-the-art methodologies, their strengths, limitations, and areas of application. The aim is to provide a comprehensive understanding of the existing literature while identifying gaps and opportunities for further research.
 
-\subsection{Intrusion Detection Systems (IDS)}  
-Intrusion Detection Systems (IDS) have evolved significantly with the integration of machine learning and deep learning techniques. Signature-based IDS identify malicious activities by recognizing known patterns or signatures. Alhomoud et al. \cite{IDS4} conducted a performance evaluation of IDS techniques, highlighting the strengths and limitations of various methodologies. Kaur and Singh \cite{IDS14} employed deep recurrent neural networks for signature generation, achieving improved detection accuracy. On the other hand, anomaly-based IDS detect deviations from normal behavior to identify potential threats. Abbasi et al. \cite{IDS1} proposed a deep learning-based feature extraction mechanism optimized with a finite state machine, enhancing anomaly detection. Liu et al. \cite{IDS3} introduced a GA-GOGMM-based adaptive pattern learning technique, integrating fuzzy rough set-based attribute selection to improve IDS effectiveness. Chauhan et al. \cite{IDS15} explored logical analysis of data (LAD) and information gain ratio for intrusion detection in IoT systems. 
+\subsection{Intrusion Detection Systems}
+Intrusion Detection Systems have evolved significantly with the integration of machine learning and deep learning techniques. Signature-based IDS identify malicious activities by recognizing known patterns or signatures. Alhomoud et al. \cite{IDS4} conducted a performance evaluation of IDS techniques, highlighting the strengths and limitations of various methodologies. Rai et al. \cite{IDS12} employed decision tree based algorithm for intrusion detection. Kaur and Singh \cite{IDS14} employed deep recurrent neural networks for signature generation, achieving improved detection accuracy. On the other hand, anomaly-based IDS detect deviations from normal behavior to identify potential threats. Abbasi et al. \cite{IDS1} proposed a deep learning-based feature extraction mechanism optimized with a finite state machine, enhancing anomaly detection. Liu et al. \cite{IDS3} introduced a GA-GOGMM-based adaptive pattern learning technique, integrating fuzzy rough set-based attribute selection to improve IDS effectiveness. Chauhan et al. \cite{IDS15} explored logical analysis of data (LAD) and information gain ratio for intrusion detection in IoT systems.
 
-Hybrid IDS combine signature and anomaly detection approaches, leveraging their streng-ths to improve effectiveness. Ugtakhbayar et al. \cite{IDS6} developed a hybrid model that enhances detection capabilities through this integration. Similarly, Kim et al. \cite{IDS8} proposed a hybrid method to reduce false positive rates by merging anomaly detection with misuse detection. Comprehensive surveys, such as those by Santhosh Kumar et al. \cite{IDS2}, provide insights into machine learning-based IDS tailored for IoT environments, addressing unique challenges in secure communication. Khraisat et al. \cite{IDS19} reviewed IDS techniques, datasets, and challenges, offering future research directions, while Abdulganiyu et al. \cite{IDS9} focused on advancements in network IDS using machine learning models. IoT-specific IDS have gained attention due to the increasing prevalence of connected systems, with Sowmya and Anita \cite{IDS5} reviewing hybrid methods for improving scalability and performance. Furthermore, Ahmad et al. \cite{IDS16} and Dini et al. \cite{IDS17} explored machine learning and deep learning methods, enhancing IDS detection rates and reducing false positives.
+Hybrid IDS combine signature and anomaly detection approaches, leveraging their streng-ths to improve effectiveness. Ugtakhbayar et al. \cite{IDS6} developed a hybrid model that enhances detection capabilities through this integration. Similarly, Kim et al. \cite{IDS8} proposed a hybrid method to reduce false positive rates by merging anomaly detection with misuse detection. Also, Kalavandekar et al. \cite{IDS10} employed a hybrid systems using genetic algorithm and J48 (C4.5) decision tree. Comprehensive surveys, such as those by Santhosh Kumar et al. \cite{IDS2}, provide insights into machine learning-based IDS tailored for IoT environments, addressing unique challenges in secure communication. Khraisat et al. \cite{IDS19} reviewed IDS techniques, datasets, and challenges, offering future research directions, while Abdulganiyu et al. \cite{IDS9} focused on advancements in network IDS using machine learning models. IoT-specific IDS have gained attention due to the increasing prevalence of connected systems, with Sowmya and Anita \cite{IDS5} reviewing hybrid methods for improving scalability and performance. Furthermore, Ahmad et al. \cite{IDS16} and Dini et al. \cite{IDS17} explored machine learning and deep learning methods, enhancing IDS detection rates and reducing false positives.
 
-\subsection{Logical Analysis of Data (LAD)}  
-Logical Analysis of Data (LAD) is a versatile methodology applied in various domains, including IDS and data classification. Boros et al. \cite{LAD1} introduced LAD as a method for analyzing numerical data using Boolean patterns, laying the groundwork for its applications. They further demonstrated its scalability for large-scale datasets \cite{LAD2}. Algorithmic advancements, such as the accelerated pattern detection algorithm proposed by Alexe and Hammer \cite{LAD5}, have improved LAD's computational efficiency. Crama et al. \cite{LAD6} examined cause-effect relationships using Boolean functions, contributing to its theoretical foundations.
+\subsection{Logical Analysis of Data}
+Logical Analysis of Data is a versatile methodology applied in various domains, including IDS and data classification. Boros et al. \cite{LAD1} introduced LAD as a method for analyzing numerical data using Boolean patterns, laying the groundwork for its applications. They further demonstrated its scalability for large-scale datasets \cite{LAD2}. Algorithmic advancements, such as the accelerated pattern detection algorithm proposed by Alexe and Hammer \cite{LAD5}, have improved LAD's computational efficiency. Crama et al. \cite{LAD6} examined cause-effect relationships using Boolean functions, contributing to its theoretical foundations.
 
 Applications of LAD span multiple domains. In IoT security, Chauhan et al. \cite{LAD7} demonstrated its potential in intrusion detection systems. Gangopadhyay et al. \cite{LAD8} explored LAD's utility in financial applications, including accounting analytics and fraud detection. Bonates et al. \cite{LAD9} refined LAD for maximum pattern detection in data mining tasks. Comprehensive surveys, such as the one by Lejeune et al. \cite{LAD4}, review recent advancements in LAD, highlighting its versatility in data analytics and potential for further innovation.
 
 \begin{table}[ht]
-\centering
-\begin{talltblr}[
-caption={Summary of Literature on IDS and LAD},
-label={tab:lit_review}
-  ]{
-  colspec = {X[3,l]X[6,l]X[10,l]},
-  hlines,
-  vlines,
-  row{1} = {font=\bfseries}
-}
-Category       & Focus Area                     & Key Findings / Contributions \\
-
-\SetCell[r=2]{l} \textbf{IDS: Signature-based} & Pattern recognition & Performance evaluation of signature-based IDS \cite{IDS4}. \\
-                              &                     & Deep recurrent neural networks for improved signature generation \cite{IDS14}. \\
-
-\SetCell[r=3]{l}\textbf{IDS: Anomaly-based}   & Feature extraction  & Deep learning-based feature extraction mechanism \cite{IDS1}. \\
-                              & Adaptive learning   & GA-GOGMM adaptive pattern learning with fuzzy attribute selection \cite{IDS3}. \\
-                              & IoT intrusion detection & LAD and information gain ratio for IoT intrusion detection \cite{IDS15}. \\
-
-\SetCell[r=3]{l}\textbf{IDS: Hybrid Approaches} & Enhanced detection & Integration of anomaly and misuse detection for improved performance \cite{IDS6, IDS8}. \\
-                              & IoT security        & Hybrid IDS for scalable and secure IoT environments \cite{IDS5}. \\
-                              & Surveys             & Comprehensive surveys addressing challenges in machine learning-based IDS \cite{IDS2, IDS19}. \\
-
-\SetCell[r=2]{l}\textbf{LAD: Foundations}     & Pattern discovery   & Introduction to LAD for analyzing numerical data \cite{LAD1, LAD2}. \\
-                              & Algorithm development & Accelerated LAD pattern detection \cite{LAD5}. Boolean functions for cause-effect analysis \cite{LAD6}. \\
-
-\SetCell[r=4]{l}\textbf{LAD: Applications}    & IoT and Security    & LAD methods applied to IoT intrusion detection \cite{LAD7}. \\
-                              & Data analytics      & LAD in financial analytics and fraud detection \cite{LAD8}. \\
-                              & Data mining         & Maximum pattern detection and advanced LAD methodologies \cite{LAD9}. \\
-                              & Surveys             & Recent advancements and versatility of LAD \cite{LAD4}. \\
-\end{talltblr}
+  \centering
+  \caption{Summary of Literature on IDS and LAD}
+  \label{tab:litreview}
+  \begin{tabular}{|p{0.18\linewidth}|c|p{0.27\linewidth}|p{0.15\linewidth}|p{0.18\linewidth}|}
+    \hline
+    \textbf{Author}                  & \textbf{Year} & \textbf{Methodology}                                  & \textbf{Dataset}     & \textbf{Results}                                                 \\ \hline
+    Kaur and Singh \cite{IDS12}      & 2020          & Deep recurrent neural networks (RNNs)                 & CICIDS 2017, NSL-KDD & Accuracy: 99.10\%, 99.14\%                                       \\ \hline
+    Liu et al. \cite{IDS3}           & 2019          & GA-GOGMM with fuzzy rough set attribute selection     & NSL-KDD              & Detection Rate: 96.52\%                                          \\ \hline
+    Kalavandekar et al. \cite{IDS10} & 2019          & Genetic Algorithm and J48 (C4.5) decision tree        & KDDcup99             & 99.81\%                                                          \\ \hline
+    Rai el al. \cite{IDS12}          & 2016          & Decision Tree based Algorithm                         & NSL-KDD              & Accuracy: 79.52\%                                                \\ \hline
+    Chauhan et al. \cite{LAD7}       & 2021          & LAD and information gain ratio                        & Bot-IoT              & Acc: 99.988\%, Prec: 99.989\%, Recall: 99.998\%                  \\ \hline
+    Ugtakhbayar et al. \cite{IDS6}   & 2020          & Naive Bayes Classifier                                & KDD 99               & Detection Rate: 97.5\%                                           \\ \hline
+    Sowmya and Anita \cite{IDS5}     & 2022          & Review of AI-based intrusion detection system         & N/A                  &                                                                  \\ \hline
+    Boros et al. \cite{LAD1}         & 2000          & Logical Analysis of Data (LAD) for numerical analysis & N/A                  &                                                                  \\ \hline
+    Chauhan et al. \cite{LAD7}       & 2021          & LAD and Information Gain Ratio                        & Bot-IOT              & Acc: Recon: 99.97\%, DDOS: 98.87\%, DOS: 99.97\%, Theft: 43.71\% \\ \hline
+    Lejeune et al. \cite{LAD4}       & 2020          & LAD survey                                            & N/A                  &                                                                  \\ \hline
+  \end{tabular}
 \end{table}
+
+
 
 \section{Proposed Work}\label{sec:Methodology}
 \begin{figure}[ht!]
-    \centering
-    \includegraphics[width=\linewidth]{Methedology.drawio.png}
-    \caption{LAD Process Flow}
-    \label{fig:LAD}
+  \centering
+  \includegraphics[width=\linewidth]{Methedology.drawio.png}
+  \caption{LAD Process Flow}
+  \label{fig:LAD}
 \end{figure}
 
 The main issue with most IDS systems is that they are resource intensive and logically ambiguous.
 
-The proposed work is a modification of LAD which revolves around transforming data into binary format and generating rules in a Sum of Product format for the purpose of classification. The overall flow of the process is in stages: 
+The proposed work is a modification of LAD which revolves around transforming data into binary format and generating rules in a Sum of Product format for the purpose of classification. The overall flow of the process is in stages:
 
 \begin{itemize}
-    \item \textbf{Binarization:} Converting the data to binary format.
-    \item \textbf{Pattern Generation:} Using binary data to make rules.
+  \item \textbf{Binarization:} Converting the data to binary format.
+  \item \textbf{Pattern Generation:} Using binary data to make rules.
 \end{itemize}
 
 
 \subsection{Binarization}
 
 \begin{figure}[ht!]
-    \centering
-    \includegraphics[width=\linewidth]{Binarization.drawio.png}
-    \caption{Binarization Process}
-    \label{fig:Binarization}
+  \centering
+  \includegraphics[width=\linewidth]{Binarization.drawio.png}
+  \caption{Binarization Process}
+  \label{fig:Binarization}
 \end{figure}
 
 The binarization process that transforms every feature in the dataset into one or more binary features.
@@ -250,88 +238,88 @@ Binarizing a numerical feature as is may produce too many binary features with m
 So, many of these values should be collected into groups which is done by the process called binning.
 
 \begin{figure}[ht!]
-    \centering
-    \includegraphics[width=0.5\linewidth]{Binning.drawio.png}
-    \caption{Binning Process}
-    \label{fig:Binning}
+  \centering
+  \includegraphics[width=0.8\linewidth]{Binning.drawio.png}
+  \caption{Binning Process}
+  \label{fig:Binning}
 \end{figure}
 
 In binning we transform continuous numerical data into various intervals.
 This process begins with sorting of the data.
 Then the arithmetic mean of all consecutive values is taken into consideration to obtain a cutpoint.
 These values are then scored with the formula:
-\[
-\text{score} = \sqrt{\frac{\sum_{i=0}^{n-1} \sum_{j=i+1}^{n-1} (\text{rates}_i - \text{rates}_j)^2}{\frac{n^2 - (n \bmod 2)}{4}}}
-\]
+\begin{equation}
+  \label{eq:score}
+  \text{score} = \sqrt{\frac{\sum_{i=0}^{n-1} \sum_{j=i+1}^{n-1} (\text{rates}_i - \text{rates}_j)^2}{\frac{n^2 - (n \bmod 2)}{4}}}
+\end{equation}
 \begin{center}
-\footnotesize{Where \(n\) is the number of classes, \(\text{rates}_i\) is the ratio of number of samples of class \(i\) that has appeared before the cutpoint to total number of samples in class \(i\).}
+  \footnotesize{Where \(n\) is the number of classes, \(\text{rates}_i\) is the ratio of number of samples of class \(i\) that has appeared before the cutpoint to total number of samples in class \(i\).}
 \end{center}
 
 The value with the highest score if higher than a minimum threshold is stored as a cutpoint and used to divide the data into two.
 The same process is repeated for both divisions of data to divide them further until either the highest score from all divisions is less than the threshold or a maximum depth of search is reached.
 
 \begin{table}[ht!]
-    \centering
-    % \caption{Binning Example}
-
-    \begin{talltblr}[
-    caption = {Binning Example},
-    label = {tab:binning_example}
-    ]{columns = {c}, colspec={XX}}
+  \centering
+  \caption{Binning Example}
+  \label{tab:binning_example}
+  \begin{tabular}{cc}
     % First Row of Subtables
-    \begin{tblr}{columns = {c}, column{1}={l}, vlines={2-Z}{solid}, hline{2,3,Z}, cell{1}{1} = {c=4}{c}}
-        Original Sorted Values & & & \\
-        \textbf{y} & \textbf{f4}  & \textbf{Cutpoint} & \textbf{Score} \\ 
-         b &  7 & -    & -    \\
-         b & 14 & 10.5 & 0.333\\
-         a & 20 & 17   & 0.667\\
-         b & 20 & -    & -    \\
-         a & 22 & 21   & 0.75 \\
-         a & 29 & 25.5 & 0.5  \\
-         a & 31 & 30   & 0.25 \\
-    \end{tblr} 
-    &
-    \begin{tblr}{columns = {c}, column{1}={l}, vlines={2-Z}{solid}, hline{2,3,Z}, cell{1}{1} = {c=4}{c}}
-        Values after 1 Split \\
-        \textbf{y} & \textbf{f4}  & \textbf{Cutpoint} & \textbf{Score} \\
-         b &  7 & -    & -    \\
-         b & 14 & 10.5 & 0.333\\
-         a & 20 & 17   & 0.667\\
-         b & 20 & -    & -    \\ \hline \hline
-         a & 22 & -    & -    \\
-         a & 29 & 25.5 & NaN  \\
-         a & 31 & 30   & NaN  \\
-    \end{tblr} 
-    \\ % End of First Row
+    \begin{tabular}{|l|c|c|c|}
+      \hline
+      \multicolumn{4}{|c|}{Original Sorted Values} \\ \hline
+      \textbf{y} & \textbf{f4} & \textbf{Cutpoint} & \textbf{Score} \\ \hline
+      b          & 7           & -                 & -              \\
+      b          & 14          & 10.5              & 0.333          \\
+      a          & 20          & 17                & 0.667          \\
+      b          & 20          & -                 & -              \\
+      a          & 22          & 21                & 0.75           \\
+      a          & 29          & 25.5              & 0.5            \\
+      a          & 31          & 30                & 0.25           \\ \hline
+    \end{tabular}
+      &
+    \begin{tabular}{|l|c|c|c|}
+      \hline
+      \multicolumn{4}{|c|}{Values after 1 Split} \\ \hline
+      \textbf{y} & \textbf{f4} & \textbf{Cutpoint} & \textbf{Score} \\ \hline
+      b          & 7           & -                 & -              \\
+      b          & 14          & 10.5              & 0.333          \\
+      a          & 20          & 17                & 0.667          \\
+      b          & 20          & -                 & -              \\ \hline
+      a          & 22          & -                 & -              \\
+      a          & 29          & 25.5              & NaN            \\
+      a          & 31          & 30                & NaN            \\ \hline
+    \end{tabular}
+    \\ \\
     % Second Row of Subtables
-    \begin{tblr}{columns = {c}, column{1}={l}, vlines={2-Z}{solid}, hline{2,3,Z}, cell{1}{1} = {c=4}{c}}
-        Values after 2 Split \\
-        \textbf{y} & \textbf{f4}  & \textbf{Cutpoint} & \textbf{Score} \\
-         b &  7 & -    & -  \\
-         b & 14 & 10.5 & NaN\\ \hline \hline
-         a & 20 & -    & -  \\
-         b & 20 & -    & -  \\ \hline \hline
-         a & 22 & -    & -  \\
-         a & 29 & 25.5 & NaN\\
-         a & 31 & 30   & NaN\\
-    \end{tblr} 
-    &
-    \begin{tblr}{columns = {c}, column{1}={l}, vlines={2-Z}{solid}, hline{2,3,Z}, cell{1}{1} = {c=3}{c}}
-        Binning of Numerical Data \\
-        \textbf{y} & \textbf{f4} & \textbf{f4 ranges} \\
-         a & 31& \((21, \infty)\)  \\
-         a & 29& \((21, \infty)\)  \\
-         a & 20& \((17, 21)\)      \\
-         a & 22& \((21, \infty)\)  \\
-         b & 20& \((17, 21)\)      \\
-         b & 14& \((-\infty, 17)\) \\
-         b &  7& \((-\infty, 17)\) \\
-    \end{tblr} 
-    \\ % End of Second Row
-    \end{talltblr}
-
-    % \label{tab:binning_example}
+    \begin{tabular}{|l|c|c|c|}
+      \hline
+      \multicolumn{4}{|c|}{Values after 2 Split} \\ \hline
+      \textbf{y} & \textbf{f4} & \textbf{Cutpoint} & \textbf{Score} \\ \hline
+      b          & 7           & -                 & -              \\
+      b          & 14          & 10.5              & NaN            \\ \hline
+      a          & 20          & -                 & -              \\
+      b          & 20          & -                 & -              \\ \hline
+      a          & 22          & -                 & -              \\
+      a          & 29          & 25.5              & NaN            \\
+      a          & 31          & 30                & NaN            \\ \hline
+    \end{tabular}
+      &
+    \begin{tabular}{|l|c|l|}
+      \hline
+      \multicolumn{3}{|c|}{Binning of Numerical Data} \\ \hline
+      \textbf{y} & \textbf{f4} & \textbf{f4 ranges} \\ \hline
+      a          & 31          & \((21, \infty)\)   \\
+      a          & 29          & \((21, \infty)\)   \\
+      a          & 20          & \((17, 21)\)       \\
+      a          & 22          & \((21, \infty)\)   \\
+      b          & 20          & \((17, 21)\)       \\
+      b          & 14          & \((-\infty, 17)\)  \\
+      b          & 7           & \((-\infty, 17)\)  \\ \hline
+    \end{tabular}
+  \end{tabular}
 \end{table}
+
 
 All selected cutpoints are collectively used to make ranges by sorting them in ascending order along with \(-\infty\) and \(\infty\).
 Consecutive values are used as boundaries of ranges which form the bins that all collectively ideally represent the original data in discrete or nominal form.
@@ -341,64 +329,70 @@ These numerical value are processed as their binary form, using every bit of tho
 This process is repeated for every feature thereby binarizing all the data.
 
 \begin{table}[ht!]
-    \centering
-    % \label{tab:binarization}
-    \begin{talltblr}[
-    caption = {Binarization Example},
-    label = {tab:binarization}
-    ]{columns = {c}, cell{2}{1} = {c = 2}{c}, cell{3}{1} = {c = 2}{c}, colspec={XX}}   % First Row of Subtables
-    \begin{tblr}{columns = {c}, column{1} = {l}, cell{1}{1} = {c = 5}{c}, vlines = {2-Z}{solid}, hline{2,3,Z}}
-      Original Values \\ 
-        \textbf{y} & \textbf{f1} & \textbf{f2}  & \textbf{f3} & \textbf{f4} \\
-         a &  1 & green & yes & 31 \\
-         a &  4 & blue  & no  & 29 \\
-         a &  2 & blue  & yes & 20 \\
-         a &  4 & red   & no  & 22 \\
-         b &  3 & red   & yes & 20 \\
-         b &  2 & green & no  & 14 \\
-         b &  4 & green & no  & 7  \\ 
-    \end{tblr}
-    &
-\begin{tblr}{columns = {c}, column{1} = {l}, cell{1}{1} = {c = 5}{c}, vlines = {2-Z}{solid}, hline{2,3,Z}}
-  Binning of Numerical Data \\
-  \textbf{y} & \textbf{f1} & \textbf{f2}  & \textbf{f3} & \textbf{f4}  \\
-   a &  \((-\infty, 1.5)\) & green & yes & \((21, \infty)\) \\
-   a &  \((3.5, \infty)\) & blue  & no  & \((21, \infty)\) \\
-   a &  \((1.5, 2.5)\)   & blue  & yes & \((17, 21)\)     \\
-   a &  \((3.5, \infty)\) & red   & no  & \((21, \infty)\) \\
-   b &  \((2.5, 3.5)\)   & red   & yes & \((17, 21)\)     \\
-   b &  \((1.5, 2.5)\)   & green & no  & \((-\infty, 17)\) \\
-   b &  \((3.5, \infty)\) & green & no  & \((-\infty, 17)\) \\
-\end{tblr}
-    \\
+  \centering
+  \caption{Binarization Example}
+  \label{tab:binarization}
+  \begin{tabular}{cc}
+    % First Row of Subtables
+    \begin{tabular}{|l|c|c|c|c|}
+      \hline
+      \multicolumn{5}{|c|}{Original Values} \\ \hline
+      \textbf{y} & \textbf{f1} & \textbf{f2} & \textbf{f3} & \textbf{f4} \\ \hline
+      a          & 1           & green       & yes         & 31          \\
+      a          & 4           & blue        & no          & 29          \\
+      a          & 2           & blue        & yes         & 20          \\
+      a          & 4           & red         & no          & 22          \\
+      b          & 3           & red         & yes         & 20          \\
+      b          & 2           & green       & no          & 14          \\
+      b          & 4           & green       & no          & 7           \\ \hline
+    \end{tabular}
+      &
+    \begin{tabular}{|l|c|c|c|c|}
+      \hline
+      \multicolumn{5}{|c|}{Binning of Numerical Data} \\ \hline
+      \textbf{y} & \textbf{f1}        & \textbf{f2} & \textbf{f3} & \textbf{f4}       \\ \hline
+      a          & \((-\infty, 1.5)\) & green       & yes         & \((21, \infty)\)  \\
+      a          & \((3.5, \infty)\)  & blue        & no          & \((21, \infty)\)  \\
+      a          & \((1.5, 2.5)\)     & blue        & yes         & \((17, 21)\)      \\
+      a          & \((3.5, \infty)\)  & red         & no          & \((21, \infty)\)  \\
+      b          & \((2.5, 3.5)\)     & red         & yes         & \((17, 21)\)      \\
+      b          & \((1.5, 2.5)\)     & green       & no          & \((-\infty, 17)\) \\
+      b          & \((3.5, \infty)\)  & green       & no          & \((-\infty, 17)\) \\ \hline
+    \end{tabular}
+    \\ \\
     % Second Row of Subtables
-
-\begin{tblr}{columns = {c}, column{1} = {l}, cell{1}{1} = {c = 5}{c}, vlines = {2-Z}{solid}, hline{2,3,Z}}
-  Label Encoding \\
-  \textbf{y} & \textbf{f1} & \textbf{f2}  & \textbf{f3} & \textbf{f4} \\
-   a & 0 & 0 & 1 & 2 \\
-   a & 3 & 1 & 0 & 2 \\
-   a & 1 & 1 & 1 & 1 \\
-   a & 3 & 2 & 0 & 2 \\
-   b & 2 & 2 & 1 & 1 \\
-   b & 1 & 0 & 0 & 0 \\
-   b & 3 & 0 & 0 & 0 \\ 
-\end{tblr}
-    \\
-\begin{tblr}{columns = {c}, column{1} = {l}, cell{1}{1} = {c = 8}{c}, vlines = {2-Z}{solid}, hline{2,3,Z}}
-  Binarized Values \\
-  \textbf{y} & \textbf{b1\_1} & \textbf{b1\_0} & \textbf{b2\_1} & \textbf{b2\_0} & \textbf{b3} & \textbf{b4\_1} & \textbf{b4\_0} \\
-   a & false & false & false & false & true  & true  & false \\
-   a & true  & true  & false & true  & false & true  & false \\
-   a & false & true  & false & true  & true  & false & true  \\
-   a & true  & true  & true  & false & false & true  & false \\
-   b & true  & false & true  & false & true  & false & true  \\
-   b & false & true  & false & false & false & false & false \\
-   b & true  & true  & false & false & false & false & false \\
-\end{tblr}
-    \end{talltblr}
-
+    \multicolumn{2}{c}{
+      \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \multicolumn{5}{|c|}{Label Encoding} \\ \hline
+        \textbf{y} & \textbf{f1} & \textbf{f2} & \textbf{f3} & \textbf{f4} \\ \hline
+        a          & 0           & 0           & 1           & 2           \\
+        a          & 3           & 1           & 0           & 2           \\
+        a          & 1           & 1           & 1           & 1           \\
+        a          & 3           & 2           & 0           & 2           \\
+        b          & 2           & 2           & 1           & 1           \\
+        b          & 1           & 0           & 0           & 0           \\
+        b          & 3           & 0           & 0           & 0           \\ \hline
+      \end{tabular}
+    }
+    \\ \\
+    \multicolumn{2}{c}{
+      \begin{tabular}{|l|c|c|c|c|c|c|c|}
+        \hline
+        \multicolumn{8}{|c|}{Binarized Values} \\ \hline
+        \textbf{y} & \textbf{b1\_1} & \textbf{b1\_0} & \textbf{b2\_1} & \textbf{b2\_0} & \textbf{b3} & \textbf{b4\_1} & \textbf{b4\_0} \\ \hline
+        a          & false          & false          & false          & false          & true        & true           & false          \\
+        a          & true           & true           & false          & true           & false       & true           & false          \\
+        a          & false          & true           & false          & true           & true        & false          & true           \\
+        a          & true           & true           & true           & false          & false       & true           & false          \\
+        b          & true           & false          & true           & false          & true        & false          & true           \\
+        b          & false          & true           & false          & false          & false       & false          & false          \\
+        b          & true           & true           & false          & false          & false       & false          & false          \\ \hline
+      \end{tabular}
+    }
+  \end{tabular}
 \end{table}
+
 
 
 Table \ref{tab:binarization} demonstrates how original feature values are sequentially transformed through the steps of binning, label encoding, and binary conversion, highlighting the systematic nature of the binarization process and its effectiveness in preparing data for further analysis.
@@ -409,10 +403,10 @@ Once the data is binarized, patterns are generated for the purpose of classifica
 Firstly, an empty list of rules and list of patterns that contains a single blank pattern is generated as a starting point.
 
 \begin{figure}[ht!]
-    \centering
-    \includegraphics[width=0.8\linewidth]{Pattern.drawio.png}
-    \caption{Pattern Generation Process}
-    \label{fig:PatternGeneration}
+  \centering
+  \includegraphics[width=0.8\linewidth]{Pattern.drawio.png}
+  \caption{Pattern Generation Process}
+  \label{fig:PatternGeneration}
 \end{figure}
 
 Following this, from each existing pattern two new patterns for every feature in binary data are generated by adding each feature once as is and once as its inverse to the pattern.
@@ -442,44 +436,43 @@ The algorithm was implemented in Rust 1.82.0 using the polars crate which was in
 \subsection{Dataset Description}
 We utilize two popular intrusion detection datasets, as shown in Table~\ref{tab:dataset}.
 \begin{table}[ht!]
-    \centering
-    % \caption{Datasets}
-    \begin{talltblr}[
-      caption = {Datasets},
-      label = {tab:dataset}
-      ]{colspec = {lrcc}, vlines, hlines}
-        \textbf{Dataset} & \textbf{Samples} & \textbf{Features} & \textbf{Classes} \\
-        NSL-KDD \cite{DATA1} & 125,973 & 41 & 23 \\
-        KDD-Cup99 \cite{DATA2}  & 4,898,431 & 41 & 23 \\
-    \end{talltblr}
-    % \label{tab:dataset}
+  \centering
+  \caption{Datasets}
+  \label{tab:dataset}
+  \begin{tabular}{|l|r|c|c|}
+    \hline
+    \textbf{Dataset}       & \textbf{Samples} & \textbf{Features} & \textbf{Classes} \\ \hline
+    NSL-KDD \cite{DATA1}   & 125,973          & 41                & 23               \\ \hline
+    KDD-Cup99 \cite{DATA2} & 4,898,431        & 41                & 23               \\ \hline
+  \end{tabular}
 \end{table}
+
 These datasets contain labeled network traffic data, representing normal and malicious activities.
 
 \subsection{Performance Metrics}
-The following performance metrics were used to evaluate the results:
+The following performance metrics were used to evaluate the performance of proposed work:
 
-\begin{itemize} 
-    \item \textbf{Accuracy}: The proportion of correctly predicted instances out of the total instances.
-    \[
-    \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
-    \]
-    \item \textbf{Precision}: The ratio of true positive predictions to the total predicted positives (i.e., how many selected items were relevant).
-    \[
-    \text{Precision} = \frac{TP}{TP+FP}
-    \]
-    \item \textbf{Recall}: The ratio of true positives to the actual positives in the dataset (i.e., how many relevant items were selected).
-    \[
-    \text{Recall} = \frac{TP}{TP+FN}
-    \]
-    \item \textbf{F2-Score}: A weighted harmonic mean of precision and recall that gives more importance to recall, calculated as:
-    \[
-    \text{F2-Score} = \frac{5 \cdot \text{Precision} \cdot \text{Recall}}{4 \cdot \text{Precision} + \text{Recall}}.
-    \]
-    \item \textbf{Data Coverage}: The proportion of predicted instances out of the total instances.
+\begin{itemize}
+  \item \textbf{Accuracy}: The proportion of correctly predicted instances out of the total instances.
+        \begin{equation}
+          \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+        \end{equation}
+  \item \textbf{Precision}: The ratio of true positive predictions to the total predicted positives (i.e., how many selected items were relevant).
+        \begin{equation}
+          \text{Precision} = \frac{TP}{TP+FP}
+        \end{equation}
+  \item \textbf{Recall}: The ratio of true positives to the actual positives in the dataset (i.e., how many relevant items were selected).
+        \begin{equation}
+          \text{Recall} = \frac{TP}{TP+FN}
+        \end{equation}
+  \item \textbf{F2-Score}: A weighted harmonic mean of precision and recall that gives more importance to recall, calculated as:
+        \begin{equation}
+          \text{F2-Score} = \frac{5 \cdot \text{Precision} \cdot \text{Recall}}{4 \cdot \text{Precision} + \text{Recall}}.
+        \end{equation}
+  \item \textbf{Data Coverage}: The proportion of predicted instances out of the total instances.
 \end{itemize}
 
-\subsection{Tabular Results}
+\subsection{Experimental Results}
 The results presented in this section pertain to experiments conducted with a maximum depth of 4 for pattern generation.
 Table~\ref{tab:4result} provides an overview of the performance metrics across the datasets NSLKDD and KDDCup99 (10\%).
 The metrics include accuracy, precision, recall, F2-score, and coverage.
@@ -488,18 +481,17 @@ On the other hand, the KDDCup99 (10\%) dataset exhibited significantly higher pe
 These results demonstrate the effectiveness of the proposed method, particularly for the KDDCup99 dataset.
 
 \begin{table}[ht!]
-    \centering
-    % \caption{Performance Metrics for Different Datasets}
-    \begin{talltblr}[
-      caption = {Performance Metrics for Different Datasets},
-      label = {tab:4result}
-      ]{colspec = {lccccc}, hline{1,Z} = {1pt}, hline{2}}
-    \textbf{Dataset} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F2-Score} & \textbf{Coverage} \\
-    NSLKDD & 75.48\% & 85.58\% & 75.48\% & 77.30\% & 92.56\% \\
-    KDDCup99 (10\%) & 96.10\% & 99.96\% & 96.10\% & 96.85\% & 96.13\% \\
-    \end{talltblr}
-    % \label{tab:4result}
+  \centering
+  \caption{Performance Results for Proposed work}
+  \label{tab:4result}
+  \begin{tabular}{lccccc}
+    \hline
+    \textbf{Dataset} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F2-Score} & \textbf{Coverage} \\ \hline
+    NSLKDD           & 75.48\%           & 85.58\%            & 75.48\%         & 77.30\%           & 92.56\%           \\
+    KDDCup99 (10\%)  & 96.10\%           & 99.96\%            & 96.10\%         & 96.85\%           & 96.13\%           \\ \hline
+  \end{tabular}
 \end{table}
+
 
 Table~\ref{tab:Dataset_Samples} provides insights into the characteristics of the datasets used in the experiments.
 The KDDCup99 (10\%) dataset consists of 330,994 samples with 41 features, 32 of which are preprocessed and 29 are binarized.
@@ -507,18 +499,17 @@ In contrast, the NSLKDD dataset comprises 125,973 samples with 41 features, of w
 These details emphasize the variability in dataset size and feature representation, highlighting the adaptability of the binarization and rule-generation process.
 
 \begin{table}[ht!]
-    \centering
-    % \caption{Dataset Samples and Features}
-    \begin{talltblr}[
-      caption = {Dataset Samples and Features},
-      label = {tab:Dataset_Samples}
-      ]{colspec = {lcc}, hline{1,Z} = {1pt}, hline{2}}
-    \textbf{Dataset} & \textbf{Samples} & \textbf{Features} \\
-    KDDCup99 (10\%) & 330,994 & 41 (32 preprocessed, 29 binarized) \\
-    NSLKDD & 125,973 & 41 (54 binarized) \\
-    \end{talltblr}
-    % \label{tab:Dataset_Samples}
+  \centering
+  \caption{Dataset Samples and Features}
+  \label{tab:Dataset_Samples}
+  \begin{tabular}{lcc}
+    \hline
+    \textbf{Dataset} & \textbf{Samples} & \textbf{Features}                  \\ \hline
+    KDDCup99 (10\%)  & 330,994          & 41 (32 preprocessed, 29 binarized) \\
+    NSLKDD           & 125,973          & 41 (54 binarized)                  \\ \hline
+  \end{tabular}
 \end{table}
+
 
 Table~\ref{tab:Rules_Generated} focuses on the number of rules generated for the datasets based on different minimum match criteria at a depth of 3.
 For the KDDCup99 dataset, 243 rules were generated for at least one match, 85 for a minimum of 10 matches, and 42 for a minimum of 50 matches.
@@ -526,123 +517,121 @@ Similarly, for the NSLKDD dataset, the number of rules generated was 365, 150, a
 These statistics indicate how stricter matching criteria reduce the number of generated rules, ensuring more selective and meaningful rules.
 
 \begin{table}[ht!]
-    \centering
-    \begin{talltblr}[
-    caption = {Number of Rules Generated for Different Minimum Matches of Sample at depth 3},
-    label = {tab:Rules_Generated}
-    ]{colspec = {lcc}, hline{1,Z} = {1pt}, hline{2}}
-    \textbf{Matches} & \textbf{KDDCup99 (10\%)} & \textbf{NSLKDD} \\
-    1 & 243 & 365 \\
-    10 & 85 & 150 \\
-    50 & 42 & 65 \\
-  \end{talltblr}
+  \centering
+  \caption{Number of Rules Generated for Different Minimum Matches of Sample at Depth 3}
+  \label{tab:Rules_Generated}
+  \begin{tabular}{lcc}
+    \hline
+    \textbf{Matches} & \textbf{KDDCup99 (10\%)} & \textbf{NSLKDD} \\ \hline
+    1                & 243                      & 365             \\
+    10               & 85                       & 150             \\
+    50               & 42                       & 65              \\ \hline
+  \end{tabular}
 \end{table}
 
-Table~\ref{tab:Overall_Metrics} summarizes the overall metrics for both datasets under different matching criteria. 
+
+Table~\ref{tab:Overall_Metrics} summarizes the overall metrics for both datasets under different matching criteria.
 For the KDDCup99 dataset, with at least one match, the accuracy, precision, recall, and coverage were 95.91\%, 99.96\%, 95.91\%, and 95.94\%, respectively. As the match criteria increased to 10 and 50, the accuracy and recall reduced to 93.27\% and 75.80\%, respectively, but the precision remained extremely high (99.98\% and 99.97\%). Similarly, for the NSLKDD dataset, stricter match criteria also led to lower accuracy and recall while maintaining high precision. For instance, at one match, the accuracy was 75.42\%, which dropped to 71.93\% and 70.08\% for match criteria of 10 and 50, respectively.
 
 \begin{table}[ht!]
-    \centering
-    \begin{talltblr}[
-    caption={Overall Metrics for Different Matching Criteria},
-    label={tab:Overall_Metrics}
-      ]{columns = {c}, column{1} = {l}, hline{1,Z}={1pt}, hline{2,5}}
-    \textbf{Dataset} & \textbf{Matches} & \textbf{Acc} & \textbf{Prec} & \textbf{Recall} & \textbf{F2-Score} & \textbf{Coverage} \\
-    \SetCell[r=3]{l}{KDDCup99} & 1 & 95.91\% & 99.96\% & 95.91\% & - & 95.94\% \\
-    & 10 & 93.27\% & 99.98\% & 93.27\% & - & 93.29\% \\
-    & 50 & 75.80\% & 99.97\% & 75.80\% & - & 75.81\% \\
-    \SetCell[r=3]{l}{NSLKDD} & 1 & 75.42\% & 86.13\% & 75.42\% & - & 91.52\% \\
-    & 10 & 71.93\% & 87.29\% & 71.93\% & - & 85.55\% \\
-    & 50 & 70.08\% & 88.83\% & 70.08\% & - & 81.17\%\\
-    \end{talltblr}
+  \centering
+  \caption{Overall Metrics for Different Matching Criteria}
+  \label{tab:Overall_Metrics}
+  \begin{tabular}{lcccccc}
+    \hline
+    \textbf{Dataset}          & \textbf{Matches} & \textbf{Acc} & \textbf{Prec} & \textbf{Recall} & \textbf{F2-Score} & \textbf{Coverage} \\ \hline
+    \multirow{3}{*}{KDDCup99} & 1                & 95.91\%      & 99.96\%       & 95.91\%         & 96.69\%           & 95.94\%           \\
+                              & 10               & 93.27\%      & 99.98\%       & 93.27\%         & 94.54\%           & 93.29\%           \\
+                              & 50               & 75.80\%      & 99.97\%       & 75.80\%         & 79.65\%           & 75.81\%           \\ \hline
+    \multirow{3}{*}{NSLKDD}   & 1                & 75.42\%      & 86.13\%       & 75.42\%         & 77.34\%           & 91.52\%           \\
+                              & 10               & 71.93\%      & 87.29\%       & 71.93\%         & 74.55\%           & 85.55\%           \\
+                              & 50               & 70.08\%      & 88.83\%       & 70.08\%         & 73.17\%           & 81.17\%           \\ \hline
+  \end{tabular}
 \end{table}
+
 
 The decision matrices provided in Tables~\ref{tab:NSLKDD_Matrix} and \ref{tab:KDDcup_Matrix} offer a detailed view of classification performance for the NSLKDD and KDDCup99 datasets under varying minimum match criteria.
 
 \begin{table}[ht!]
-    \centering
-    \begin{talltblr}[
-    caption = {Decision Matrix for NSLKDD},
-    label = {tab:NSLKDD_Matrix}
-      ]{c}
+  \centering
+  \caption{Decision Matrix for NSLKDD}
+  \label{tab:NSLKDD_Matrix}
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \multicolumn{4}{|c|}{\textbf{For Minimum 1 Matching Sample}} \\ \hline
+                    & \textbf{Attack} & \textbf{Normal} & \textit{NULL} \\ \hline
+    \textbf{Attack} & 8295            & 3336            & 1202          \\ \hline
+    \textbf{Normal} & 292             & 8709            & 710           \\ \hline
+  \end{tabular}
+  \vspace{0.5cm}
 
-    \begin{tblr}{columns = {c}, column{1} = {l}, column{Z} = {r}, vlines = {2-Z}{solid}, hline{2-Z}}
-        \SetCell[c=4]{c}{\textbf{For Minimum 1 Matching Sample}} \\
-         & \textbf{Attack} & \textbf{Normal} & \textit{NULL} \\  
-        \textbf{Attack} & 8295 & 3336 & 1202 \\
-        \textbf{Normal} & 292 & 8709 & 710
-    \end{tblr}
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \multicolumn{4}{|c|}{\textbf{For Minimum 10 Matching Samples}} \\ \hline
+                    & \textbf{Attack} & \textbf{Normal} & \textit{NULL} \\ \hline
+    \textbf{Attack} & 7781            & 2801            & 2151          \\ \hline
+    \textbf{Normal} & 268             & 8336            & 1107          \\ \hline
+  \end{tabular}
+  \vspace{0.5cm}
 
-\\
-
-    \begin{tblr}{columns = {c}, column{1} = {l}, column{Z} = {r}, vlines = {2-Z}{solid}, hline{2-Z}}
-      \SetCell[c=4]{c}{\textbf{For Minimum 10 Matching Samples}} \\
-         & \textbf{Attack} & \textbf{Normal} & \textit{NULL} \\
-        \textbf{Attack} & 7781 & 2801 & 2151 \\
-        \textbf{Normal} & 268 & 8336 & 1107 
-    \end{tblr}
-
-\\
-    \begin{tblr}{columns = {c}, column{1} = {l}, column{Z} = {r}, vlines = {2-Z}{solid}, hline{2-Z}}
-        \SetCell[c=4]{c}{\textbf{For Minimum 50 Matching Samples}} \\
-         & \textbf{Attack} & \textbf{Normal} & \textit{NULL} \\
-        \textbf{Attack} & 7725 & 2253 & 2855 \\
-        \textbf{Normal} & 247 & 8073 & 1391 \\
-    \end{tblr}
-
-    \end{talltblr}
-
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \multicolumn{4}{|c|}{\textbf{For Minimum 50 Matching Samples}} \\ \hline
+                    & \textbf{Attack} & \textbf{Normal} & \textit{NULL} \\ \hline
+    \textbf{Attack} & 7725            & 2253            & 2855          \\ \hline
+    \textbf{Normal} & 247             & 8073            & 1391          \\ \hline
+  \end{tabular}
 \end{table}
+
+
 
 For the NSLKDD dataset, as shown in Table~\ref{tab:NSLKDD_Matrix}, the number of correctly classified "Attack" and "Normal" instances decreases as the minimum match criterion becomes stricter, resulting in an increase in \textit{NULL} (unmatched) cases.
 For instance, with a minimum of one match, there were 8,295 correctly classified "Attack" instances and 8,709 "Normal" instances. However, with a minimum of 50 matches, these numbers reduced to 7,725 and 8,073, respectively.
 
 \begin{table}[ht!]
-    \centering
-    \begin{talltblr}[
-    caption = {Decision Matrix for KDDCup (10\%)},
-    label = {tab:KDDcup_Matrix}
-      ]{c}
+  \centering
+  \caption{Decision Matrix for KDDCup (10\%)}
+  \label{tab:KDDcup_Matrix}
 
-    % Subtable 1
-    \begin{tblr}{columns = {c}, column{1} = {l}, column{Z} = {r}, vlines = {2-Z}{solid}, hline{2-Z}}
-        \SetCell[c=7]{c}{\textbf{For Minimum 1 Matching Sample}} \\
-         & \textbf{DOS} & \textbf{Normal} & \textbf{Probe} & \textbf{R2L} & \textbf{U2R} & \textit{NULL} \\
-        \textbf{DOS} & 124431 & 8 & 0 & 0 & 0 & 4742 \\
-        \textbf{Normal} & 3 & 30515 & 3 & 2 & 5 & 1574 \\
-        \textbf{Probe} & 2 & 8 & 1259 & 0 & 0 & 86 \\
-        \textbf{R2L} & 0 & 10 & 0 & 42 & 1 & 219 \\
-        \textbf{U2R} & 1 & 1 & 0 & 2 & 13 & 0 \\
-    \end{tblr}
+  % Subtable 1: For Minimum 1 Matching Sample
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{7}{|c|}{\textbf{For Minimum 1 Matching Sample}} \\ \hline
+                    & \textbf{DOS} & \textbf{Normal} & \textbf{Probe} & \textbf{R2L} & \textbf{U2R} & \textit{NULL} \\ \hline
+    \textbf{DOS}    & 124431       & 8               & 0              & 0            & 0            & 4742          \\ \hline
+    \textbf{Normal} & 3            & 30515           & 3              & 2            & 5            & 1574          \\ \hline
+    \textbf{Probe}  & 2            & 8               & 1259           & 0            & 0            & 86            \\ \hline
+    \textbf{R2L}    & 0            & 10              & 0              & 42           & 1            & 219           \\ \hline
+    \textbf{U2R}    & 1            & 1               & 0              & 2            & 13           & 0             \\ \hline
+  \end{tabular}
+  \vspace{0.5cm}
 
-\\
-    % Subtable 2
+  % Subtable 2: For Minimum 10 Matching Samples
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{7}{|c|}{\textbf{For Minimum 10 Matching Samples}} \\ \hline
+                    & \textbf{DOS} & \textbf{Normal} & \textbf{Probe} & \textbf{R2L} & \textbf{U2R} & \textit{NULL} \\ \hline
+    \textbf{DOS}    & 123506       & 4               & 0              & 0            & 0            & 5671          \\ \hline
+    \textbf{Normal} & 1            & 27529           & 1              & 1            & 0            & 4570          \\ \hline
+    \textbf{Probe}  & 1            & 2               & 898            & 0            & 0            & 454           \\ \hline
+    \textbf{R2L}    & 0            & 8               & 0              & 123          & 0            & 241           \\ \hline
+    \textbf{U2R}    & 1            & 2               & 0              & 1            & 7            & 6             \\ \hline
+  \end{tabular}
+  \vspace{0.5cm}
 
-    \begin{tblr}{columns = {c}, column{1} = {l}, column{Z} = {r}, vlines = {2-Z}{solid}, hline{2-Z}}
-      \SetCell[c=7]{c}{\textbf{For Minimum 10 Matching Samples}} \\
-         & \textbf{DOS} & \textbf{Normal} & \textbf{Probe} & \textbf{R2L} & \textbf{U2R} & \textit{NULL} \\
-        \textbf{DOS} & 123506 & 4 & 0 & 0 & 0 & 5671 \\
-        \textbf{Normal} & 1 & 27529 & 1 & 1 & 0 & 4570 \\
-        \textbf{Probe} & 1 & 2 & 898 & 0 & 0 & 454 \\
-        \textbf{R2L} & 0 & 8 & 0 & 123 & 0 & 241 \\
-        \textbf{U2R} & 1 & 2 & 0 & 1 & 7 & 6 \\
-    \end{tblr}
-
-\\
-    % Subtable 3
-    \begin{tblr}{columns = {c}, column{1} = {l}, column{Z} = {r}, vlines = {2-Z}{solid}, hline{2-Z}}
-        \SetCell[c=7]{c}{\textbf{For Minimum 50 Matching Samples}} \\
-         & \textbf{DOS} & \textbf{Normal} & \textbf{Probe} & \textbf{R2L} & \textbf{U2R} & \textit{NULL} \\
-        \textbf{DOS} & 95373 & 3 & 0 & 0 & 0 & 33805 \\
-        \textbf{Normal} & 1 & 27265 & 2 & 1 & 0 & 4833 \\
-        \textbf{Probe} & 4 & 2 & 843 & 0 & 0 & 504 \\
-        \textbf{R2L} & 0 & 4 & 0 & 94 & 0 & 274 \\
-        \textbf{U2R} & 1 & 2 & 0 & 0 & 0 & 14 \\
-    \end{tblr}
-
-    \end{talltblr}
-
+  % Subtable 3: For Minimum 50 Matching Samples
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{7}{|c|}{\textbf{For Minimum 50 Matching Samples}} \\ \hline
+                    & \textbf{DOS} & \textbf{Normal} & \textbf{Probe} & \textbf{R2L} & \textbf{U2R} & \textit{NULL} \\ \hline
+    \textbf{DOS}    & 95373        & 3               & 0              & 0            & 0            & 33805         \\ \hline
+    \textbf{Normal} & 1            & 27265           & 2              & 1            & 0            & 4833          \\ \hline
+    \textbf{Probe}  & 4            & 2               & 843            & 0            & 0            & 504           \\ \hline
+    \textbf{R2L}    & 0            & 4               & 0              & 94           & 0            & 274           \\ \hline
+    \textbf{U2R}    & 1            & 2               & 0              & 0            & 0            & 14            \\ \hline
+  \end{tabular}
 \end{table}
+
 
 A similar trend is observed in the decision matrices for the KDDCup99 dataset in Table~\ref{tab:KDDcup_Matrix}. For example, with one match, 124,431 "DOS" instances and 30,515 "Normal" instances were correctly classified, while with 50 matches, these numbers dropped to 95,373 and 27,265, respectively.
 This illustrates the trade-off between stricter match criteria and classification coverage.
@@ -654,495 +643,495 @@ Overall, the tables provide a comprehensive view of the performance and effectiv
 The proposed method has some limitations:
 
 \begin{itemize}
-    \item \textbf{Long Training Time:} The training time of LAD is of the order \( O(scf^d) \), where \(s\) is the number of samples, \(c\) is the number of classes, \(f\) is the number of features in the binarized data, and \(d\) is the maximum number of attributes in a rule.
-    \item \textbf{Incomplete Coverage of Dataset:} The dataset may not be completely covered by LAD if the maximum number of attributes is not set to a sufficiently high value.
+  \item \textbf{Long Training Time:} The training time of LAD is of the order \( O(scf^d) \), where \(s\) is the number of samples, \(c\) is the number of classes, \(f\) is the number of features in the binarized data, and \(d\) is the maximum number of attributes in a rule.
+  \item \textbf{Incomplete Coverage of Dataset:} The dataset may not be completely covered by LAD if the maximum number of attributes is not set to a sufficiently high value.
 \end{itemize}
 
 \section{Conclusion} \label{sec:Conclusion}
 
-In this study, we explored the application of a Learning Algorithm for Intrusion Detection (LAD) on two well-known intrusion detection datasets: NSL-KDD and KDD-Cup99. The experiments were conducted on a high-performance workstation, and various performance metrics, including accuracy, precision, recall, F2-score, and data coverage, were used to evaluate the effectiveness of the proposed method. 
+In this study, we explored the application of a Learning Algorithm for Intrusion Detection (LAD) on two well-known intrusion detection datasets: NSL-KDD and KDD-Cup99. The experiments were conducted on a high-performance workstation, and various performance metrics, including accuracy, precision, recall, F2-score, and data coverage, were used to evaluate the effectiveness of the proposed method.
 
 The results indicated that LAD achieved a good balance between performance and data coverage across both datasets. Specifically, the method demonstrated high accuracy and precision, especially on the KDD-Cup99 dataset (10\% subset), with an accuracy of 96.10\% and precision of 99.96\%. However, it was also observed that LAD exhibited limitations, such as long training times and incomplete dataset coverage when the maximum number of attributes was not sufficiently set.
 
-Despite these challenges, the proposed approach provided valuable insights into improving the effectiveness of intrusion detection systems, and future work may focus on addressing the limitations related to training time and dataset coverage to enhance the overall performance of the system. 
+Despite these challenges, the proposed approach provided valuable insights into improving the effectiveness of intrusion detection systems, and future work may focus on addressing the limitations related to training time and dataset coverage to enhance the overall performance of the system.
 
 In conclusion, the findings from this study contribute to the development of more efficient and accurate intrusion detection techniques, with potential for further optimization in future research.
 
 
 
-% \section{Results}\label{sec2}
-
-% Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
-
-% \section{This is an example for first level head---section head}\label{sec3}
-
-% \subsection{This is an example for second level head---subsection head}\label{subsec2}
-
-% \subsubsection{This is an example for third level head---subsubsection head}\label{subsubsec2}
-
-% Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. 
-
-% \section{Equations}\label{sec4}
-
-% Equations in \LaTeX\ can either be inline or on-a-line by itself (``display equations''). For
-% inline equations use the \verb+$...$+ commands. E.g.: The equation
-% $H\psi = E \psi$ is written via the command \verb+$H \psi = E \psi$+.
-
-% For display equations (with auto generated equation numbers)
-% one can use the equation or align environments:
-% \begin{equation}
-% \|\tilde{X}(k)\|^2 \leq\frac{\sum\limits_{i=1}^{p}\left\|\tilde{Y}_i(k)\right\|^2+\sum\limits_{j=1}^{q}\left\|\tilde{Z}_j(k)\right\|^2 }{p+q}.\label{eq1}
-% \end{equation}
-% where,
-% \begin{align}
-% D_\mu &=  \partial_\mu - ig \frac{\lambda^a}{2} A^a_\mu \nonumber \\
-% F^a_{\mu\nu} &= \partial_\mu A^a_\nu - \partial_\nu A^a_\mu + g f^{abc} A^b_\mu A^a_\nu \label{eq2}
-% \end{align}
-% Notice the use of \verb+\nonumber+ in the align environment at the end
-% of each line, except the last, so as not to produce equation numbers on
-% lines where no equation numbers are required. The \verb+\label{}+ command
-% should only be used at the last line of an align environment where
-% \verb+\nonumber+ is not used.
-% \begin{equation}
-% Y_\infty = \left( \frac{m}{\textrm{GeV}} \right)^{-3}
-%     \left[ 1 + \frac{3 \ln(m/\textrm{GeV})}{15}
-%     + \frac{\ln(c_2/5)}{15} \right]
-% \end{equation}
-% The class file also supports the use of \verb+\mathbb{}+, \verb+\mathscr{}+ and
-% \verb+\mathcal{}+ commands. As such \verb+\mathbb{R}+, \verb+\mathscr{R}+
-% and \verb+\mathcal{R}+ produces $\mathbb{R}$, $\mathscr{R}$ and $\mathcal{R}$
-% respectively (refer Subsubsection~\ref{subsubsec2}).
-
-% \section{Tables}\label{sec5}
-
-% Tables can be inserted via the normal table and tabular environment. To put
-% footnotes inside tables you should use \verb+\footnotetext[]{...}+ tag.
-% The footnote appears just below the table itself (refer Tables~\ref{tab1} and \ref{tab2}). 
-% For the corresponding footnotemark use \verb+\footnotemark[...]+
-
-% \begin{table}[ht!]
-% \caption{Caption text}\label{tab1}%
-% \begin{tabular}{@{}llll@{}}
-% \toprule
-% Column 1 & Column 2  & Column 3 & Column 4\\
-% \midrule
-% row 1    & data 1   & data 2  & data 3  \\
-% row 2    & data 4   & data 5\footnotemark[1]  & data 6  \\
-% row 3    & data 7   & data 8  & data 9\footnotemark[2]  \\
-% \botrule
-% \end{tabular}
-% \footnotetext{Source: This is an example of table footnote. This is an example of table footnote.}
-% \footnotetext[1]{Example for a first table footnote. This is an example of table footnote.}
-% \footnotetext[2]{Example for a second table footnote. This is an example of table footnote.}
-% \end{table}
-
-% \noindent
-% The input format for the above table is as follows:
-
-% %%=============================================%%
-% %% For presentation purpose, we have included  %%
-% %% \bigskip command. Please ignore this.       %%
-% %%=============================================%%
-% \bigskip
-% \begin{verbatim}
-% \begin{table}[<placement-specifier>]
-% \caption{<table-caption>}\label{<table-label>}%
-% \begin{tabular}{@{}llll@{}}
-% \toprule
-% Column 1 & Column 2 & Column 3 & Column 4\\
-% \midrule
-% row 1 & data 1 & data 2	 & data 3 \\
-% row 2 & data 4 & data 5\footnotemark[1] & data 6 \\
-% row 3 & data 7 & data 8	 & data 9\footnotemark[2]\\
-% \botrule
-% \end{tabular}
-% \footnotetext{Source: This is an example of table footnote. 
-% This is an example of table footnote.}
-% \footnotetext[1]{Example for a first table footnote.
-% This is an example of table footnote.}
-% \footnotetext[2]{Example for a second table footnote. 
-% This is an example of table footnote.}
-% \end{table}
-% \end{verbatim}
-% \bigskip
-% %%=============================================%%
-% %% For presentation purpose, we have included  %%
-% %% \bigskip command. Please ignore this.       %%
-% %%=============================================%%
-
-% \begin{table}[ht!]
-% \caption{Example of a lengthy table which is set to full textwidth}\label{tab2}
-% \begin{tabular*}{\textwidth}{@{\extracolsep\fill}lcccccc}
-% \toprule%
-% & \multicolumn{3}{@{}c@{}}{Element 1\footnotemark[1]} & \multicolumn{3}{@{}c@{}}{Element 2\footnotemark[2]} \\\cmidrule{2-4}\cmidrule{5-7}%
-% Project & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ \\
-% \midrule
-% Element 3  & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$\\
-% Element 4  & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$\\
-% \botrule
-% \end{tabular*}
-% \footnotetext{Note: This is an example of table footnote. This is an example of table footnote this is an example of table footnote this is an example of~table footnote this is an example of table footnote.}
-% \footnotetext[1]{Example for a first table footnote.}
-% \footnotetext[2]{Example for a second table footnote.}
-% \end{table}
-
-% In case of double column layout, tables which do not fit in single column width should be set to full text width. For this, you need to use \verb+\begin{table*}+ \verb+...+ \verb+\end{table*}+ instead of \verb+\begin{table}+ \verb+...+ \verb+\end{table}+ environment. Lengthy tables which do not fit in textwidth should be set as rotated table. For this, you need to use \verb+\begin{sidewaystable}+ \verb+...+ \verb+\end{sidewaystable}+ instead of \verb+\begin{table*}+ \verb+...+ \verb+\end{table*}+ environment. This environment puts tables rotated to single column width. For tables rotated to double column width, use \verb+\begin{sidewaystable*}+ \verb+...+ \verb+\end{sidewaystable*}+.
-
-% \begin{sidewaystable}[p]
-% \caption{Tables which are too long to fit, should be written using the ``sidewaystable'' environment as shown here}\label{tab3}
-% \begin{tabular*}{0.99\textheight}{@{\extracolsep\fill}lcccccc}
-% \toprule%
-% & \multicolumn{3}{@{}c@{}}{Element 1\footnotemark[1]}& \multicolumn{3}{@{}c@{}}{Element\footnotemark[2]} \\\cmidrule{2-4}\cmidrule{5-7}%
-% Projectile & Energy	& $\sigma_{calc}$ & $\sigma_{expt}$ & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ \\
-% \midrule
-% Element 3 & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$ \\
-% Element 4 & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$ \\
-% Element 5 & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$ \\
-% Element 6 & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$ \\
-% \botrule
-% \end{tabular*}
-% \footnotetext{Note: This is an example of table footnote this is an example of table footnote this is an example of table footnote this is an example of~table footnote this is an example of table footnote.}
-% \footnotetext[1]{This is an example of table footnote.}
-% \end{sidewaystable}
-
-% \section{Figures}\label{sec6}
-
-% As per the \LaTeX\ standards you need to use eps images for \LaTeX\ compilation and \verb+pdf/jpg/png+ images for \verb+PDFLaTeX+ compilation. This is one of the major difference between \LaTeX\ and \verb+PDFLaTeX+. Each image should be from a single input .eps/vector image file. Avoid using subfigures. The command for inserting images for \LaTeX\ and \verb+PDFLaTeX+ can be generalized. The package used to insert images in \verb+LaTeX/PDFLaTeX+ is the graphicx package. Figures can be inserted via the normal figure environment as shown in the below example:
-
-% %%=============================================%%
-% %% For presentation purpose, we have included  %%
-% %% \bigskip command. Please ignore this.       %%
-% %%=============================================%%
-% \bigskip
-% \begin{verbatim}
-% \begin{figure}[<placement-specifier>]
-% \centering
-% \includegraphics{<eps-file>}
-% \caption{<figure-caption>}\label{<figure-label>}
-% \end{figure}
-% \end{verbatim}
-% \bigskip
-% %%=============================================%%
-% %% For presentation purpose, we have included  %%
-% %% \bigskip command. Please ignore this.       %%
-% %%=============================================%%
-
-% \begin{figure}[ht!]
-% \centering
-% \includegraphics[width=0.9\textwidth]{fig.eps}
-% \caption{This is a widefig. This is an example of long caption this is an example of long caption  this is an example of long caption this is an example of long caption}\label{fig1}
-% \end{figure}
-
-% In case of double column layout, the above format puts figure captions/images to single column width. To get spanned images, we need to provide \verb+\begin{figure*}+ \verb+...+ \verb+\end{figure*}+.
-
-% For sample purpose, we have included the width of images in the optional argument of \verb+\includegraphics+ tag. Please ignore this. 
-
-% \section{Algorithms, Program codes and Listings}\label{sec7}
-
-% Packages \verb+algorithm+, \verb+algorithmicx+ and \verb+algpseudocode+ are used for setting algorithms in \LaTeX\ using the format:
-
-% %%=============================================%%
-% %% For presentation purpose, we have included  %%
-% %% \bigskip command. Please ignore this.       %%
-% %%=============================================%%
-% \bigskip
-% \begin{verbatim}
-% \begin{algorithm}
-% \caption{<alg-caption>}\label{<alg-label>}
-% \begin{algorithmic}[1]
-% . . .
-% \end{algorithmic}
-% \end{algorithm}
-% \end{verbatim}
-% \bigskip
-% %%=============================================%%
-% %% For presentation purpose, we have included  %%
-% %% \bigskip command. Please ignore this.       %%
-% %%=============================================%%
-
-% You may refer above listed package documentations for more details before setting \verb+algorithm+ environment. For program codes, the ``verbatim'' package is required and the command to be used is \verb+\begin{verbatim}+ \verb+...+ \verb+\end{verbatim}+. 
-
-% Similarly, for \verb+listings+, use the \verb+listings+ package. \verb+\begin{lstlisting}+ \verb+...+ \verb+\end{lstlisting}+ is used to set environments similar to \verb+verbatim+ environment. Refer to the \verb+lstlisting+ package documentation for more details.
-
-% A fast exponentiation procedure:
-
-% \lstset{texcl=true,basicstyle=\small\sf,commentstyle=\small\rm,mathescape=true,escapeinside={(*}{*)}}
-% \begin{lstlisting}
-% begin
-%   for $i:=1$ to $10$ step $1$ do
-%       expt($2,i$);  
-%       newline() od                (*\textrm{Comments will be set flush to the right margin}*)
-% where
-% proc expt($x,n$) $\equiv$
-%   $z:=1$;
-%   do if $n=0$ then exit fi;
-%      do if odd($n$) then exit fi;                 
-%         comment: (*\textrm{This is a comment statement;}*)
-%         $n:=n/2$; $x:=x*x$ od;
-%      { $n>0$ };
-%      $n:=n-1$; $z:=z*x$ od;
-%   print($z$). 
-% end
-% \end{lstlisting}
-
-% \begin{algorithm}
-% \caption{Calculate $y = x^n$}\label{algo1}
-% \begin{algorithmic}[1]
-% \Require $n \geq 0 \vee x \neq 0$
-% \Ensure $y = x^n$ 
-% \State $y \Leftarrow 1$
-% \If{$n < 0$}\label{algln2}
-%         \State $X \Leftarrow 1 / x$
-%         \State $N \Leftarrow -n$
-% \Else
-%         \State $X \Leftarrow x$
-%         \State $N \Leftarrow n$
-% \EndIf
-% \While{$N \neq 0$}
-%         \If{$N$ is even}
-%             \State $X \Leftarrow X \times X$
-%             \State $N \Leftarrow N / 2$
-%         \Else[$N$ is odd]
-%             \State $y \Leftarrow y \times X$
-%             \State $N \Leftarrow N - 1$
-%         \EndIf
-% \EndWhile
-% \end{algorithmic}
-% \end{algorithm}
-
-% %%=============================================%%
-% %% For presentation purpose, we have included  %%
-% %% \bigskip command. Please ignore this.       %%
-% %%=============================================%%
-% \bigskip
-% \begin{minipage}{0.9\hsize}%
-% \lstset{frame=single,framexleftmargin=-1pt,framexrightmargin=-17pt,framesep=12pt,linewidth=0.98\textwidth,language=pascal}% Set your language (you can change the language for each code-block optionally)
-% %%% Start your code-block
-% \begin{lstlisting}
-% for i:=maxint to 0 do
-% begin
-% { do nothing }
-% end;
-% Write('Case insensitive ');
-% Write('Pascal keywords.');
-% \end{lstlisting}
-% \end{minipage}
-
-% \section{Cross referencing}\label{sec8}
-
-% Environments such as figure, table, equation and align can have a label
-% declared via the \verb+\label{#label}+ command. For figures and table
-% environments use the \verb+\label{}+ command inside or just
-% below the \verb+\caption{}+ command. You can then use the
-% \verb+\ref{#label}+ command to cross-reference them. As an example, consider
-% the label declared for Figure~\ref{fig1} which is
-% \verb+\label{fig1}+. To cross-reference it, use the command 
-% \verb+Figure \ref{fig1}+, for which it comes up as
-% ``Figure~\ref{fig1}''. 
-
-% To reference line numbers in an algorithm, consider the label declared for the line number 2 of Algorithm~\ref{algo1} is \verb+\label{algln2}+. To cross-reference it, use the command \verb+\ref{algln2}+ for which it comes up as line~\ref{algln2} of Algorithm~\ref{algo1}.
-
-% \subsection{Details on reference citations}\label{subsec7}
-
-% Standard \LaTeX\ permits only numerical citations. To support both numerical and author-year citations this template uses \verb+natbib+ \LaTeX\ package. For style guidance please refer to the template user manual.
-
-% Here is an example for \verb+\cite{...}+: \cite{bib1}. Another example for \verb+\citep{...}+: \citep{bib2}. For author-year citation mode, \verb+\cite{...}+ prints Jones et al. (1990) and \verb+\citep{...}+ prints (Jones et al., 1990).
-
-% All cited bib entries are printed at the end of this article: \cite{bib3}, \cite{bib4}, \cite{bib5}, \cite{bib6}, \cite{bib7}, \cite{bib8}, \cite{bib9}, \cite{bib10}, \cite{bib11}, \cite{bib12} and \cite{bib13}.
-
-
-% \section{Examples for theorem like environments}\label{sec10}
-
-% For theorem like environments, we require \verb+amsthm+ package. There are three types of predefined theorem styles exists---\verb+thmstyleone+, \verb+thmstyletwo+ and \verb+thmstylethree+ 
-
-% %%=============================================%%
-% %% For presentation purpose, we have included  %%
-% %% \bigskip command. Please ignore this.       %%
-% %%=============================================%%
-% \bigskip
-% \begin{tabular}{|l|p{19pc}|}
-% \hline
-% \verb+thmstyleone+ & Numbered, theorem head in bold font and theorem text in italic style \\\hline
-% \verb+thmstyletwo+ & Numbered, theorem head in roman font and theorem text in italic style \\\hline
-% \verb+thmstylethree+ & Numbered, theorem head in bold font and theorem text in roman style \\\hline
-% \end{tabular}
-% \bigskip
-% %%=============================================%%
-% %% For presentation purpose, we have included  %%
-% %% \bigskip command. Please ignore this.       %%
-% %%=============================================%%
-
-% For mathematics journals, theorem styles can be included as shown in the following examples:
-
-% \begin{theorem}[Theorem subhead]\label{thm1}
-% Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. 
-% Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. 
-% Example theorem text. 
-% \end{theorem}
-
-% Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
-
-% \begin{proposition}
-% Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. 
-% Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. 
-% \end{proposition}
-
-% Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
-
-% \begin{example}
-% Phasellus adipiscing semper elit. Proin fermentum massa
-% ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
-% at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. 
-% \end{example}
-
-% Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
-
-% \begin{remark}
-% Phasellus adipiscing semper elit. Proin fermentum massa
-% ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
-% at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. 
-% \end{remark}
-
-% Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
-
-% \begin{definition}[Definition sub head]
-% Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. 
-% \end{definition}
-
-% Additionally a predefined ``proof'' environment is available: \verb+\begin{proof}+ \verb+...+ \verb+\end{proof}+. This prints a ``Proof'' head in italic font style and the ``body text'' in roman font style with an open square at the end of each proof environment. 
-
-% \begin{proof}
-% Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. 
-% \end{proof}
-
-% Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
-
-% \begin{proof}[Proof of Theorem~{\upshape\ref{thm1}}]
-% Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. 
-% \end{proof}
-
-% \noindent
-% For a quote environment, use \verb+\begin{quote}...\end{quote}+
-% \begin{quote}
-% Quoted text example. Aliquam porttitor quam a lacus. Praesent vel arcu ut tortor cursus volutpat. In vitae pede quis diam bibendum placerat. Fusce elementum
-% convallis neque. Sed dolor orci, scelerisque ac, dapibus nec, ultricies ut, mi. Duis nec dui quis leo sagittis commodo.
-% \end{quote}
-
-% Sample body text. Sample body text. Sample body text. Sample body text. Sample body text (refer Figure~\ref{fig1}). Sample body text. Sample body text. Sample body text (refer Table~\ref{tab3}). 
-
-% \section{Methods}\label{sec11}
-
-% Topical subheadings are allowed. Authors must ensure that their Methods section includes adequate experimental and characterization data necessary for others in the field to reproduce their work. Authors are encouraged to include RIIDs where appropriate. 
-
-% \textbf{Ethical approval declarations} (only required where applicable) Any article reporting experiment/s carried out on (i)~live vertebrate (or higher invertebrates), (ii)~humans or (iii)~human samples must include an unambiguous statement within the methods section that meets the following requirements: 
-
-% \begin{enumerate}[1.]
-% \item Approval: a statement which confirms that all experimental protocols were approved by a named institutional and/or licensing committee. Please identify the approving body in the methods section
-
-% \item Accordance: a statement explicitly saying that the methods were carried out in accordance with the relevant guidelines and regulations
-
-% \item Informed consent (for experiments involving humans or human tissue samples): include a statement confirming that informed consent was obtained from all participants and/or their legal guardian/s
-% \end{enumerate}
-
-% If your manuscript includes potentially identifying patient/participant information, or if it describes human transplantation research, or if it reports results of a clinical trial then  additional information will be required. Please visit (\url{https://www.nature.com/nature-research/editorial-policies}) for Nature Portfolio journals, (\url{https://www.springer.com/gp/authors-editors/journal-author/journal-author-helpdesk/publishing-ethics/14214}) for Springer Nature journals, or (\url{https://www.biomedcentral.com/getpublished/editorial-policies\#ethics+and+consent}) for BMC.
-
-% \section{Discussion}\label{sec12}
-
-% Discussions should be brief and focused. In some disciplines use of Discussion or `Conclusion' is interchangeable. It is not mandatory to use both. Some journals prefer a section `Results and Discussion' followed by a section `Conclusion'. Please refer to Journal-level guidance for any specific requirements. 
-
-% \section{Conclusion}\label{sec13}
-
-% Conclusions may be used to restate your hypothesis or research question, restate your major findings, explain the relevance and the added value of your work, highlight any limitations of your study, describe future directions for research and recommendations. 
-
-% In some disciplines use of Discussion or 'Conclusion' is interchangeable. It is not mandatory to use both. Please refer to Journal-level guidance for any specific requirements. 
-
-% \backmatter
-
-% \bmhead*{Supplementary information}
-
-% If your article has accompanying supplementary file/s please state so here. 
-
-% Authors reporting data from electrophoretic gels and blots should supply the full unprocessed scans for key as part of their Supplementary information. This may be requested by the editorial team/s if it is missing.
-
-% Please refer to Journal-level guidance for any specific requirements.
-
-% \bmhead*{Acknowledgements}
-
-% Acknowledgements are not compulsory. Where included they should be brief. Grant or contribution numbers may be acknowledged.
-
-% Please refer to Journal-level guidance for any specific requirements.
-
-% \section*{Declarations}
-
-% Some journals require declarations to be submitted in a standardised format. Please check the Instructions for Authors of the journal to which you are submitting to see if you need to complete this section. If yes, your manuscript must contain the following sections under the heading `Declarations':
-
-% \begin{itemize}
-% \item Funding
-% \item Conflict of interest/Competing interests (check journal-specific guidelines for which heading to use)
-% \item Ethics approval and consent to participate
-% \item Consent for publication
-% \item Data availability 
-% \item Materials availability
-% \item Code availability 
-% \item Author contribution
-% \end{itemize}
-
-% \noindent
-% If any of the sections are not relevant to your manuscript, please include the heading and write `Not applicable' for that section. 
-
-% %%===================================================%%
-% %% For presentation purpose, we have included        %%
-% %% \bigskip command. Please ignore this.             %%
-% %%===================================================%%
-% \bigskip
-% \begin{flushleft}%
-% Editorial Policies for:
-
-% \bigskip\noindent
-% Springer journals and proceedings: \url{https://www.springer.com/gp/editorial-policies}
-
-% \bigskip\noindent
-% Nature Portfolio journals: \url{https://www.nature.com/nature-research/editorial-policies}
-
-% \bigskip\noindent
-% \textit{Scientific Reports}: \url{https://www.nature.com/srep/journal-policies/editorial-policies}
-
-% \bigskip\noindent
-% BMC journals: \url{https://www.biomedcentral.com/getpublished/editorial-policies}
-% \end{flushleft}
-
-% \begin{appendices}
-
-% \section{Section title of first appendix}\label{secA1}
-
-% An appendix contains supplementary information that is not an essential part of the text itself but which may be helpful in providing a more comprehensive understanding of the research problem or it is information that is too cumbersome to be included in the body of the paper.
-
-% %%=============================================%%
-% %% For submissions to Nature Portfolio Journals %%
-% %% please use the heading ``Extended Data''.   %%
-% %%=============================================%%
-
-% %%=============================================================%%
-% %% Sample for another appendix section			       %%
-% %%=============================================================%%
-
-% %% \section{Example of another appendix section}\label{secA2}%
-% %% Appendices may be used for helpful, supporting or essential material that would otherwise 
-% %% clutter, break up or be distracting to the text. Appendices can consist of sections, figures, 
-% %% tables and equations etc.
-
-% \end{appendices}
-
-%%===========================================================================================%%
-%% If you are submitting to one of the Nature Portfolio journals, using the eJP submission   %%
-%% system, please include the references within the manuscript file itself. You may do this  %%
-%% by copying the reference list from your .bbl file, paste it into the main manuscript .tex %%
-%% file, and delete the associated \verb+\bibliography+ commands.                            %%
-%%===========================================================================================%%
+% % \section{Results}\label{sec2}
+
+% % Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
+
+% % \section{This is an example for first level head---section head}\label{sec3}
+
+% % \subsection{This is an example for second level head---subsection head}\label{subsec2}
+
+% % \subsubsection{This is an example for third level head---subsubsection head}\label{subsubsec2}
+
+% % Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. 
+
+% % \section{Equations}\label{sec4}
+
+% % Equations in \LaTeX\ can either be inline or on-a-line by itself (``display equations''). For
+% % inline equations use the \verb+$...$+ commands. E.g.: The equation
+% % $H\psi = E \psi$ is written via the command \verb+$H \psi = E \psi$+.
+
+% % For display equations (with auto generated equation numbers)
+% % one can use the equation or align environments:
+% % \begin{equation}
+% % \|\tilde{X}(k)\|^2 \leq\frac{\sum\limits_{i=1}^{p}\left\|\tilde{Y}_i(k)\right\|^2+\sum\limits_{j=1}^{q}\left\|\tilde{Z}_j(k)\right\|^2 }{p+q}.\label{eq1}
+% % \end{equation}
+% % where,
+% % \begin{align}
+% % D_\mu &=  \partial_\mu - ig \frac{\lambda^a}{2} A^a_\mu \nonumber \\
+% % F^a_{\mu\nu} &= \partial_\mu A^a_\nu - \partial_\nu A^a_\mu + g f^{abc} A^b_\mu A^a_\nu \label{eq2}
+% % \end{align}
+% % Notice the use of \verb+\nonumber+ in the align environment at the end
+% % of each line, except the last, so as not to produce equation numbers on
+% % lines where no equation numbers are required. The \verb+\label{}+ command
+% % should only be used at the last line of an align environment where
+% % \verb+\nonumber+ is not used.
+% % \begin{equation}
+% % Y_\infty = \left( \frac{m}{\textrm{GeV}} \right)^{-3}
+% %     \left[ 1 + \frac{3 \ln(m/\textrm{GeV})}{15}
+% %     + \frac{\ln(c_2/5)}{15} \right]
+% % \end{equation}
+% % The class file also supports the use of \verb+\mathbb{}+, \verb+\mathscr{}+ and
+% % \verb+\mathcal{}+ commands. As such \verb+\mathbb{R}+, \verb+\mathscr{R}+
+% % and \verb+\mathcal{R}+ produces $\mathbb{R}$, $\mathscr{R}$ and $\mathcal{R}$
+% % respectively (refer Subsubsection~\ref{subsubsec2}).
+
+% % \section{Tables}\label{sec5}
+
+% % Tables can be inserted via the normal table and tabular environment. To put
+% % footnotes inside tables you should use \verb+\footnotetext[]{...}+ tag.
+% % The footnote appears just below the table itself (refer Tables~\ref{tab1} and \ref{tab2}). 
+% % For the corresponding footnotemark use \verb+\footnotemark[...]+
+
+% % \begin{table}[ht!]
+% % \caption{Caption text}\label{tab1}%
+% % \begin{tabular}{@{}llll@{}}
+% % \toprule
+% % Column 1 & Column 2  & Column 3 & Column 4\\
+% % \midrule
+% % row 1    & data 1   & data 2  & data 3  \\
+% % row 2    & data 4   & data 5\footnotemark[1]  & data 6  \\
+% % row 3    & data 7   & data 8  & data 9\footnotemark[2]  \\
+% % \botrule
+% % \end{tabular}
+% % \footnotetext{Source: This is an example of table footnote. This is an example of table footnote.}
+% % \footnotetext[1]{Example for a first table footnote. This is an example of table footnote.}
+% % \footnotetext[2]{Example for a second table footnote. This is an example of table footnote.}
+% % \end{table}
+
+% % \noindent
+% % The input format for the above table is as follows:
+
+% % %%=============================================%%
+% % %% For presentation purpose, we have included  %%
+% % %% \bigskip command. Please ignore this.       %%
+% % %%=============================================%%
+% % \bigskip
+% % \begin{verbatim}
+% % \begin{table}[<placement-specifier>]
+% % \caption{<table-caption>}\label{<table-label>}%
+% % \begin{tabular}{@{}llll@{}}
+% % \toprule
+% % Column 1 & Column 2 & Column 3 & Column 4\\
+% % \midrule
+% % row 1 & data 1 & data 2  & data 3 \\
+% % row 2 & data 4 & data 5\footnotemark[1] & data 6 \\
+% % row 3 & data 7 & data 8  & data 9\footnotemark[2]\\
+% % \botrule
+% % \end{tabular}
+% % \footnotetext{Source: This is an example of table footnote. 
+% % This is an example of table footnote.}
+% % \footnotetext[1]{Example for a first table footnote.
+% % This is an example of table footnote.}
+% % \footnotetext[2]{Example for a second table footnote. 
+% % This is an example of table footnote.}
+% % \end{table}
+% % \end{verbatim}
+% % \bigskip
+% % %%=============================================%%
+% % %% For presentation purpose, we have included  %%
+% % %% \bigskip command. Please ignore this.       %%
+% % %%=============================================%%
+
+% % \begin{table}[ht!]
+% % \caption{Example of a lengthy table which is set to full textwidth}\label{tab2}
+% % \begin{tabular*}{\textwidth}{@{\extracolsep\fill}lcccccc}
+% % \toprule%
+% % & \multicolumn{3}{@{}c@{}}{Element 1\footnotemark[1]} & \multicolumn{3}{@{}c@{}}{Element 2\footnotemark[2]} \\\cmidrule{2-4}\cmidrule{5-7}%
+% % Project & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ \\
+% % \midrule
+% % Element 3  & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$\\
+% % Element 4  & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$\\
+% % \botrule
+% % \end{tabular*}
+% % \footnotetext{Note: This is an example of table footnote. This is an example of table footnote this is an example of table footnote this is an example of~table footnote this is an example of table footnote.}
+% % \footnotetext[1]{Example for a first table footnote.}
+% % \footnotetext[2]{Example for a second table footnote.}
+% % \end{table}
+
+% % In case of double column layout, tables which do not fit in single column width should be set to full text width. For this, you need to use \verb+\begin{table*}+ \verb+...+ \verb+\end{table*}+ instead of \verb+\begin{table}+ \verb+...+ \verb+\end{table}+ environment. Lengthy tables which do not fit in textwidth should be set as rotated table. For this, you need to use \verb+\begin{sidewaystable}+ \verb+...+ \verb+\end{sidewaystable}+ instead of \verb+\begin{table*}+ \verb+...+ \verb+\end{table*}+ environment. This environment puts tables rotated to single column width. For tables rotated to double column width, use \verb+\begin{sidewaystable*}+ \verb+...+ \verb+\end{sidewaystable*}+.
+
+% % \begin{sidewaystable}[p]
+% % \caption{Tables which are too long to fit, should be written using the ``sidewaystable'' environment as shown here}\label{tab3}
+% % \begin{tabular*}{0.99\textheight}{@{\extracolsep\fill}lcccccc}
+% % \toprule%
+% % & \multicolumn{3}{@{}c@{}}{Element 1\footnotemark[1]}& \multicolumn{3}{@{}c@{}}{Element\footnotemark[2]} \\\cmidrule{2-4}\cmidrule{5-7}%
+% % Projectile & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ \\
+% % \midrule
+% % Element 3 & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$ \\
+% % Element 4 & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$ \\
+% % Element 5 & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$ \\
+% % Element 6 & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$ \\
+% % \botrule
+% % \end{tabular*}
+% % \footnotetext{Note: This is an example of table footnote this is an example of table footnote this is an example of table footnote this is an example of~table footnote this is an example of table footnote.}
+% % \footnotetext[1]{This is an example of table footnote.}
+% % \end{sidewaystable}
+
+% % \section{Figures}\label{sec6}
+
+% % As per the \LaTeX\ standards you need to use eps images for \LaTeX\ compilation and \verb+pdf/jpg/png+ images for \verb+PDFLaTeX+ compilation. This is one of the major difference between \LaTeX\ and \verb+PDFLaTeX+. Each image should be from a single input .eps/vector image file. Avoid using subfigures. The command for inserting images for \LaTeX\ and \verb+PDFLaTeX+ can be generalized. The package used to insert images in \verb+LaTeX/PDFLaTeX+ is the graphicx package. Figures can be inserted via the normal figure environment as shown in the below example:
+
+% % %%=============================================%%
+% % %% For presentation purpose, we have included  %%
+% % %% \bigskip command. Please ignore this.       %%
+% % %%=============================================%%
+% % \bigskip
+% % \begin{verbatim}
+% % \begin{figure}[<placement-specifier>]
+% % \centering
+% % \includegraphics{<eps-file>}
+% % \caption{<figure-caption>}\label{<figure-label>}
+% % \end{figure}
+% % \end{verbatim}
+% % \bigskip
+% % %%=============================================%%
+% % %% For presentation purpose, we have included  %%
+% % %% \bigskip command. Please ignore this.       %%
+% % %%=============================================%%
+
+% % \begin{figure}[ht!]
+% % \centering
+% % \includegraphics[width=0.9\textwidth]{fig.eps}
+% % \caption{This is a widefig. This is an example of long caption this is an example of long caption  this is an example of long caption this is an example of long caption}\label{fig1}
+% % \end{figure}
+
+% % In case of double column layout, the above format puts figure captions/images to single column width. To get spanned images, we need to provide \verb+\begin{figure*}+ \verb+...+ \verb+\end{figure*}+.
+
+% % For sample purpose, we have included the width of images in the optional argument of \verb+\includegraphics+ tag. Please ignore this. 
+
+% % \section{Algorithms, Program codes and Listings}\label{sec7}
+
+% % Packages \verb+algorithm+, \verb+algorithmicx+ and \verb+algpseudocode+ are used for setting algorithms in \LaTeX\ using the format:
+
+% % %%=============================================%%
+% % %% For presentation purpose, we have included  %%
+% % %% \bigskip command. Please ignore this.       %%
+% % %%=============================================%%
+% % \bigskip
+% % \begin{verbatim}
+% % \begin{algorithm}
+% % \caption{<alg-caption>}\label{<alg-label>}
+% % \begin{algorithmic}[1]
+% % . . .
+% % \end{algorithmic}
+% % \end{algorithm}
+% % \end{verbatim}
+% % \bigskip
+% % %%=============================================%%
+% % %% For presentation purpose, we have included  %%
+% % %% \bigskip command. Please ignore this.       %%
+% % %%=============================================%%
+
+% % You may refer above listed package documentations for more details before setting \verb+algorithm+ environment. For program codes, the ``verbatim'' package is required and the command to be used is \verb+\begin{verbatim}+ \verb+...+ \verb+\end{verbatim}+. 
+
+% % Similarly, for \verb+listings+, use the \verb+listings+ package. \verb+\begin{lstlisting}+ \verb+...+ \verb+\end{lstlisting}+ is used to set environments similar to \verb+verbatim+ environment. Refer to the \verb+lstlisting+ package documentation for more details.
+
+% % A fast exponentiation procedure:
+
+% % \lstset{texcl=true,basicstyle=\small\sf,commentstyle=\small\rm,mathescape=true,escapeinside={(*}{*)}}
+% % \begin{lstlisting}
+% % begin
+% %   for $i:=1$ to $10$ step $1$ do
+% %       expt($2,i$);  
+% %       newline() od                (*\textrm{Comments will be set flush to the right margin}*)
+% % where
+% % proc expt($x,n$) $\equiv$
+% %   $z:=1$;
+% %   do if $n=0$ then exit fi;
+% %      do if odd($n$) then exit fi;                 
+% %         comment: (*\textrm{This is a comment statement;}*)
+% %         $n:=n/2$; $x:=x*x$ od;
+% %      { $n>0$ };
+% %      $n:=n-1$; $z:=z*x$ od;
+% %   print($z$). 
+% % end
+% % \end{lstlisting}
+
+% % \begin{algorithm}
+% % \caption{Calculate $y = x^n$}\label{algo1}
+% % \begin{algorithmic}[1]
+% % \Require $n \geq 0 \vee x \neq 0$
+% % \Ensure $y = x^n$ 
+% % \State $y \Leftarrow 1$
+% % \If{$n < 0$}\label{algln2}
+% %         \State $X \Leftarrow 1 / x$
+% %         \State $N \Leftarrow -n$
+% % \Else
+% %         \State $X \Leftarrow x$
+% %         \State $N \Leftarrow n$
+% % \EndIf
+% % \While{$N \neq 0$}
+% %         \If{$N$ is even}
+% %             \State $X \Leftarrow X \times X$
+% %             \State $N \Leftarrow N / 2$
+% %         \Else[$N$ is odd]
+% %             \State $y \Leftarrow y \times X$
+% %             \State $N \Leftarrow N - 1$
+% %         \EndIf
+% % \EndWhile
+% % \end{algorithmic}
+% % \end{algorithm}
+
+% % %%=============================================%%
+% % %% For presentation purpose, we have included  %%
+% % %% \bigskip command. Please ignore this.       %%
+% % %%=============================================%%
+% % \bigskip
+% % \begin{minipage}{0.9\hsize}%
+% % \lstset{frame=single,framexleftmargin=-1pt,framexrightmargin=-17pt,framesep=12pt,linewidth=0.98\textwidth,language=pascal}% Set your language (you can change the language for each code-block optionally)
+% % %%% Start your code-block
+% % \begin{lstlisting}
+% % for i:=maxint to 0 do
+% % begin
+% % { do nothing }
+% % end;
+% % Write('Case insensitive ');
+% % Write('Pascal keywords.');
+% % \end{lstlisting}
+% % \end{minipage}
+
+% % \section{Cross referencing}\label{sec8}
+
+% % Environments such as figure, table, equation and align can have a label
+% % declared via the \verb+\label{#label}+ command. For figures and table
+% % environments use the \verb+\label{}+ command inside or just
+% % below the \verb+\caption{}+ command. You can then use the
+% % \verb+\ref{#label}+ command to cross-reference them. As an example, consider
+% % the label declared for Figure~\ref{fig1} which is
+% % \verb+\label{fig1}+. To cross-reference it, use the command 
+% % \verb+Figure \ref{fig1}+, for which it comes up as
+% % ``Figure~\ref{fig1}''. 
+
+% % To reference line numbers in an algorithm, consider the label declared for the line number 2 of Algorithm~\ref{algo1} is \verb+\label{algln2}+. To cross-reference it, use the command \verb+\ref{algln2}+ for which it comes up as line~\ref{algln2} of Algorithm~\ref{algo1}.
+
+% % \subsection{Details on reference citations}\label{subsec7}
+
+% % Standard \LaTeX\ permits only numerical citations. To support both numerical and author-year citations this template uses \verb+natbib+ \LaTeX\ package. For style guidance please refer to the template user manual.
+
+% % Here is an example for \verb+\cite{...}+: \cite{bib1}. Another example for \verb+\citep{...}+: \citep{bib2}. For author-year citation mode, \verb+\cite{...}+ prints Jones et al. (1990) and \verb+\citep{...}+ prints (Jones et al., 1990).
+
+% % All cited bib entries are printed at the end of this article: \cite{bib3}, \cite{bib4}, \cite{bib5}, \cite{bib6}, \cite{bib7}, \cite{bib8}, \cite{bib9}, \cite{bib10}, \cite{bib11}, \cite{bib12} and \cite{bib13}.
+
+
+% % \section{Examples for theorem like environments}\label{sec10}
+
+% % For theorem like environments, we require \verb+amsthm+ package. There are three types of predefined theorem styles exists---\verb+thmstyleone+, \verb+thmstyletwo+ and \verb+thmstylethree+ 
+
+% % %%=============================================%%
+% % %% For presentation purpose, we have included  %%
+% % %% \bigskip command. Please ignore this.       %%
+% % %%=============================================%%
+% % \bigskip
+% % \begin{tabular}{|l|p{19pc}|}
+% % \hline
+% % \verb+thmstyleone+ & Numbered, theorem head in bold font and theorem text in italic style \\\hline
+% % \verb+thmstyletwo+ & Numbered, theorem head in roman font and theorem text in italic style \\\hline
+% % \verb+thmstylethree+ & Numbered, theorem head in bold font and theorem text in roman style \\\hline
+% % \end{tabular}
+% % \bigskip
+% % %%=============================================%%
+% % %% For presentation purpose, we have included  %%
+% % %% \bigskip command. Please ignore this.       %%
+% % %%=============================================%%
+
+% % For mathematics journals, theorem styles can be included as shown in the following examples:
+
+% % \begin{theorem}[Theorem subhead]\label{thm1}
+% % Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. 
+% % Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. 
+% % Example theorem text. 
+% % \end{theorem}
+
+% % Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
+
+% % \begin{proposition}
+% % Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. 
+% % Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. 
+% % \end{proposition}
+
+% % Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
+
+% % \begin{example}
+% % Phasellus adipiscing semper elit. Proin fermentum massa
+% % ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
+% % at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. 
+% % \end{example}
+
+% % Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
+
+% % \begin{remark}
+% % Phasellus adipiscing semper elit. Proin fermentum massa
+% % ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
+% % at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. 
+% % \end{remark}
+
+% % Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
+
+% % \begin{definition}[Definition sub head]
+% % Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. 
+% % \end{definition}
+
+% % Additionally a predefined ``proof'' environment is available: \verb+\begin{proof}+ \verb+...+ \verb+\end{proof}+. This prints a ``Proof'' head in italic font style and the ``body text'' in roman font style with an open square at the end of each proof environment. 
+
+% % \begin{proof}
+% % Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. 
+% % \end{proof}
+
+% % Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
+
+% % \begin{proof}[Proof of Theorem~{\upshape\ref{thm1}}]
+% % Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. 
+% % \end{proof}
+
+% % \noindent
+% % For a quote environment, use \verb+\begin{quote}...\end{quote}+
+% % \begin{quote}
+% % Quoted text example. Aliquam porttitor quam a lacus. Praesent vel arcu ut tortor cursus volutpat. In vitae pede quis diam bibendum placerat. Fusce elementum
+% % convallis neque. Sed dolor orci, scelerisque ac, dapibus nec, ultricies ut, mi. Duis nec dui quis leo sagittis commodo.
+% % \end{quote}
+
+% % Sample body text. Sample body text. Sample body text. Sample body text. Sample body text (refer Figure~\ref{fig1}). Sample body text. Sample body text. Sample body text (refer Table~\ref{tab3}). 
+
+% % \section{Methods}\label{sec11}
+
+% % Topical subheadings are allowed. Authors must ensure that their Methods section includes adequate experimental and characterization data necessary for others in the field to reproduce their work. Authors are encouraged to include RIIDs where appropriate. 
+
+% % \textbf{Ethical approval declarations} (only required where applicable) Any article reporting experiment/s carried out on (i)~live vertebrate (or higher invertebrates), (ii)~humans or (iii)~human samples must include an unambiguous statement within the methods section that meets the following requirements: 
+
+% % \begin{enumerate}[1.]
+% % \item Approval: a statement which confirms that all experimental protocols were approved by a named institutional and/or licensing committee. Please identify the approving body in the methods section
+
+% % \item Accordance: a statement explicitly saying that the methods were carried out in accordance with the relevant guidelines and regulations
+
+% % \item Informed consent (for experiments involving humans or human tissue samples): include a statement confirming that informed consent was obtained from all participants and/or their legal guardian/s
+% % \end{enumerate}
+
+% % If your manuscript includes potentially identifying patient/participant information, or if it describes human transplantation research, or if it reports results of a clinical trial then  additional information will be required. Please visit (\url{https://www.nature.com/nature-research/editorial-policies}) for Nature Portfolio journals, (\url{https://www.springer.com/gp/authors-editors/journal-author/journal-author-helpdesk/publishing-ethics/14214}) for Springer Nature journals, or (\url{https://www.biomedcentral.com/getpublished/editorial-policies\#ethics+and+consent}) for BMC.
+
+% % \section{Discussion}\label{sec12}
+
+% % Discussions should be brief and focused. In some disciplines use of Discussion or `Conclusion' is interchangeable. It is not mandatory to use both. Some journals prefer a section `Results and Discussion' followed by a section `Conclusion'. Please refer to Journal-level guidance for any specific requirements. 
+
+% % \section{Conclusion}\label{sec13}
+
+% % Conclusions may be used to restate your hypothesis or research question, restate your major findings, explain the relevance and the added value of your work, highlight any limitations of your study, describe future directions for research and recommendations. 
+
+% % In some disciplines use of Discussion or 'Conclusion' is interchangeable. It is not mandatory to use both. Please refer to Journal-level guidance for any specific requirements. 
+
+% % \backmatter
+
+% % \bmhead*{Supplementary information}
+
+% % If your article has accompanying supplementary file/s please state so here. 
+
+% % Authors reporting data from electrophoretic gels and blots should supply the full unprocessed scans for key as part of their Supplementary information. This may be requested by the editorial team/s if it is missing.
+
+% % Please refer to Journal-level guidance for any specific requirements.
+
+% % \bmhead*{Acknowledgements}
+
+% % Acknowledgements are not compulsory. Where included they should be brief. Grant or contribution numbers may be acknowledged.
+
+% % Please refer to Journal-level guidance for any specific requirements.
+
+% % \section*{Declarations}
+
+% % Some journals require declarations to be submitted in a standardised format. Please check the Instructions for Authors of the journal to which you are submitting to see if you need to complete this section. If yes, your manuscript must contain the following sections under the heading `Declarations':
+
+% % \begin{itemize}
+% % \item Funding
+% % \item Conflict of interest/Competing interests (check journal-specific guidelines for which heading to use)
+% % \item Ethics approval and consent to participate
+% % \item Consent for publication
+% % \item Data availability 
+% % \item Materials availability
+% % \item Code availability 
+% % \item Author contribution
+% % \end{itemize}
+
+% % \noindent
+% % If any of the sections are not relevant to your manuscript, please include the heading and write `Not applicable' for that section. 
+
+% % %%===================================================%%
+% % %% For presentation purpose, we have included        %%
+% % %% \bigskip command. Please ignore this.             %%
+% % %%===================================================%%
+% % \bigskip
+% % \begin{flushleft}%
+% % Editorial Policies for:
+
+% % \bigskip\noindent
+% % Springer journals and proceedings: \url{https://www.springer.com/gp/editorial-policies}
+
+% % \bigskip\noindent
+% % Nature Portfolio journals: \url{https://www.nature.com/nature-research/editorial-policies}
+
+% % \bigskip\noindent
+% % \textit{Scientific Reports}: \url{https://www.nature.com/srep/journal-policies/editorial-policies}
+
+% % \bigskip\noindent
+% % BMC journals: \url{https://www.biomedcentral.com/getpublished/editorial-policies}
+% % \end{flushleft}
+
+% % \begin{appendices}
+
+% % \section{Section title of first appendix}\label{secA1}
+
+% % An appendix contains supplementary information that is not an essential part of the text itself but which may be helpful in providing a more comprehensive understanding of the research problem or it is information that is too cumbersome to be included in the body of the paper.
+
+% % %%=============================================%%
+% % %% For submissions to Nature Portfolio Journals %%
+% % %% please use the heading ``Extended Data''.   %%
+% % %%=============================================%%
+
+% % %%=============================================================%%
+% % %% Sample for another appendix section             %%
+% % %%=============================================================%%
+
+% % %% \section{Example of another appendix section}\label{secA2}%
+% % %% Appendices may be used for helpful, supporting or essential material that would otherwise 
+% % %% clutter, break up or be distracting to the text. Appendices can consist of sections, figures, 
+% % %% tables and equations etc.
+
+% % \end{appendices}
+
+% %%===========================================================================================%%
+% %% If you are submitting to one of the Nature Portfolio journals, using the eJP submission   %%
+% %% system, please include the references within the manuscript file itself. You may do this  %%
+% %% by copying the reference list from your .bbl file, paste it into the main manuscript .tex %%
+% %% file, and delete the associated \verb+\bibliography+ commands.                            %%
+% %%===========================================================================================%%
 
 \bibliography{sn-bibliography}% common bib file
-%% if required, the content of .bbl file can be included here once bbl is generated
-%%\input sn-article.bbl
+% %% if required, the content of .bbl file can be included here once bbl is generated
+% %%\input sn-article.bbl
 
 
 
